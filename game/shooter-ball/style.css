@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+}
+.score {
+  font-size: 2rem;
+  position: absolute;
+  color: #fff;
+  z-index: 2;
+}
+#canvas {
+  position: relative;
+  z-index: 1;
+}

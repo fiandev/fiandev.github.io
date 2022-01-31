@@ -4,14 +4,57 @@
 }
 body {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.score {
-  font-size: 2rem;
+.scoreboard {
   position: absolute;
-  color: #fff;
   z-index: 2;
+  margin-top: -50px;
+ /* background-color: #fff;*/
+}
+.game-over h1 {
+  display: none;
+}
+.score, #score {
+  font-size: 1.5rem;
+  color: #fff;
+  display: inline-block;
 }
 #canvas {
   position: relative;
   z-index: 1;
+}
+
+.popUp {
+  background-color: #fff;
+  position: absolute;
+  z-index: 3;
+  opacity: .9;
+  padding: 20px;
+}
+.game-over-popUp {
+  background-color: #fff;
+  position: absolute;
+  z-index: 3;
+  opacity: .9;
+  padding: 30px 20px;
+}
+.popUp p,.game-over-popUp p{
+  font-size: .8rem;
+  text-align: center;
+}
+
+.popUp button, .game-over-popUp button {
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.popUp button#no {
+  background-color: red;
+}
+.popUp button#yes {
+  background-color: green;
 }

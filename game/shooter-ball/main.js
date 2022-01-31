@@ -1,10 +1,12 @@
 const canvas = document.querySelector("#canvas"),
 c = canvas.getContext("2d"),
-score_result = document.querySelector("#score");
+score_result = document.querySelector("#score"),
+lastScore = localStorage.getItem("lastScore", score);
 canvas.width = innerWidth;
 canvas.height = innerHeight;
-
-
+var bg_audio = new Audio()
+bg_audio.src = "bg.wav";
+//bg_audio.loop = true;
 class Player {
   constructor(x,y,radius,color) {
     this.x = x,
@@ -85,7 +87,11 @@ const projectile = new Projectile(
   
 const projectiles = []
 const enemies = []
-let animationId, score = 0
+var animationId;
+var score = 0;
+if (lastScore != "undefined") {
+  score = parseInt(lastScore)
+}
 addEventListener("click", (event) => {
   const angle = Math.atan2(
     event.clientY - canvas.height / 2,
@@ -134,6 +140,7 @@ function spawnEnemies() {
 }
 function animate(){
   score_result.innerHTML = score;
+  bg_audio.play();
   animationId = requestAnimationFrame(animate)
   c.fillStyle = "rgba(0, 0, 0, 0.1)"
   c.fillRect(0, 0, canvas.width, canvas.height)
@@ -158,23 +165,34 @@ function animate(){
     /* game over */
     if (dist - enemy.radius - player.radius < 1) {
       //console.log(`game over !`);
-     /* var audio = new Audio()
-          audio.src = "uh.mp3"
+      bg_audio.pause()
+      var audio = new Audio()
+          audio.src = "dead.wav"
           audio.play()
-          */
+          
       cancelAnimationFrame(animationId)
-      score_result.innerHTML = `${score} | Game Over!`;
-      
+      score_result.innerHTML = `Game Over!`;
+      document.querySelector(".scoreboard").classList.add("game-over")
+      localStorage.setItem("lastScore", score)
+      let body = document.querySelector("body")
+      let element = `
+      <div class="popUp">
+      <p>score : ${score}</p>
+      <p style="margin-bottom:10px;">try again?</p>
+      <button onclick="no()" id="no">no</button>
+      <button onclick="yes()" id="yes">yes</button>
+      </div>`;
+      body.insertAdjacentHTML("beforeend", element)
     }
     projectiles.forEach((projectile, projectileIndex) => {
     const dist = Math.hypot(projectile.x - enemy.x, projectile.y - enemy.y)
     /* object touch */
       if (dist - enemy.radius - projectile.radius < 1) {
-        /*
+        
         var audio = new Audio()
-        audio.src = "point.mp3"
+        audio.src = "earn-point.wav"
         audio.play()
-        */
+        
         setTimeout(() => {
           score += enemy.point
           console.log(`(+) = ${enemy.point} score`)
@@ -185,16 +203,18 @@ function animate(){
     });
   })
 }
-function play_audio(url) {
-     return new Promise(function(resolve, reject) {   // return a promise
-         var audio = new Audio();                     // create audio wo/ src
-         audio.preload = "auto";                      // intend to play through
-         audio.autoplay = true;                       // autoplay when loaded
-         audio.onerror = reject;                      // on error, reject
-         audio.onended = resolve;                     // when done, resolve
-
-         audio.src = url; // just for example
-     });
+function yes(){
+  window.location.reload()
+}
+function no(){
+  localStorage.setItem("lastScore",0)
+  let body = document.querySelector("body")
+      let element = `
+      <div class="game-over-popUp">
+      <p>Game Over</p>
+      <p>Your Score : ${score}</p>
+      </div>`;
+      body.insertAdjacentHTML("beforeend", element)
 }
 animate()
 spawnEnemies()

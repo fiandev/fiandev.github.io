@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="meta converter untuk merubah sebuah text atau kalimat menjadi kode morse secara otomatis">
+    <title>morse converter | by FianDev</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://gchan1319.github.io/img/gw.jpg" type="text/css" media="all" />
+  </head>
+  <body>
+    <h1 class="title-top">Morse converter</h1>
+    <input type="text" name="input" id="input" value="" />
+    <input onclick="copy_text()" type="text" name="result" id="result" placeholder="result on here .." value="" readonly />
+    <button type="button" onclick="copy_text()">copy</button>
+    <button type="button" onclick="clear_input()">clear</button>
+    <footer>
+      <p>&copy; <year></year> ~ <a><host></host></a></p>
+    </footer>
+    <script type="text/javascript" charset="utf-8">
+      document.querySelector("year").innerHTML = new Date().getFullYear();
+      document.querySelector("host").innerHTML = window.location.hostname;
+      document.querySelector("footer a").setAttribute("href",`//${window.location.hostname}`);
+    </script>
+    <script type="text/javascript" charset="utf-8">
+     document.querySelector("#input").addEventListener("change",function(){
+       document.querySelector("#result").setAttribute("value",morse(this.value))
+     })
+     function copy_text(){
+       let result = document.querySelector("#result");
+       result.select();
+       document.execCommand('copy');
+       let value = result.value;
+       result.setAttribute("value","Copied ✅");
+       setTimeout(function() {
+         result.setAttribute("value",value);
+       }, 500);
+     }
+     function clear_input(){
+       window.location.reload();
+     }
+     function morse(anu){
+   let text = anu;
+   anu = anu.toLowerCase();
+   anu = anu.split(" ").join("  / ");
+   //anu = "/ "+anu;
+   anu = anu.split("a").join("• — / ");
+   anu = anu.split("b").join("— • • • / ");
+   anu = anu.split("c").join("— • — • / ");
+   anu = anu.split("d").join("— • • / ");
+   anu = anu.split("e").join("— / ");
+   anu = anu.split("f").join("• • — • / ");
+   anu = anu.split("g").join("— — • / ");
+   anu = anu.split("h").join("• • • • / ");
+   anu = anu.split("i").join("• • / ");
+   anu = anu.split("j").join("• — — — / ");
+   anu = anu.split("k").join("— • — / ");
+   anu = anu.split("l").join("• — • • / ");
+   anu = anu.split("m").join("— — / ");
+   anu = anu.split("n").join("— • / ");
+   anu = anu.split("o").join("— — — / ");
+   anu = anu.split("p").join("• — — • / ");
+   anu = anu.split("q").join("— — • — / ");
+   anu = anu.split("r").join("• — • / ");
+   anu = anu.split("s").join("• • • / ");
+   anu = anu.split("t").join("— / ");
+   anu = anu.split("u").join("• • — / ");
+   anu = anu.split("v").join("• • • — / ");
+   anu = anu.split("w").join("• — — / ");
+   anu = anu.split("x").join("— • • — / ");
+   anu = anu.split("y").join("— • — — / ");
+   anu = anu.split("z").join("— — • • / ");
+   anu = anu.split("1").join("• — — — — / ");
+   anu = anu.split("2").join("• • — — — / ");
+   anu = anu.split("3").join("• • • — — / ");
+   anu = anu.split("4").join("• • • • — / ");
+   anu = anu.split("5").join("• • • • • / ");
+   anu = anu.split("6").join("— • • • / ");
+   anu = anu.split("7").join("— — • • • / ");
+   anu = anu.split("8").join("— — — • • / ");
+   anu = anu.split("9").join("— — — — • / ");
+   anu = anu.split("0").join("— — — — — / ");
+  /* console.log({
+     "text":text,
+     "result":anu
+   }) */
+   console.log( {
+     "text":text,
+     "result":anu
+   });
+   /*return*/
+   return anu
+}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+ul li {
+  list-style: none;
+}
+.progress ,.progress-bar {
+  transition: 2s;
+}
+.lazy-image {
+  opacity: 0;
+  transition: 1s;
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) 
+{ 
+  /* set background wave */
+  #profile, #main {
+    background-color: #03baff;
+    background-image: url('/img/wave.svg');
+    background-position: bottom;
+    background-size: 10px cover;
+    background-repeat: no-repeat;
+  }
+  #about, #contact {
+    background-color: #16fb98;
+    background-image: url('/img/wave2.svg');
+    background-position: bottom;
+    background-size: 10px cover;
+    background-repeat: no-repeat;
+  }
+  .header {
+    background-color: #006dea;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .burger,.header-mobile {
+    display: none;
+  }
+  #profile nav ul li {
+    margin: auto .5rem;
+  }
+  #profile nav ul li a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #fff;
+    text-decoration: none;
+    color: #000;
+  }
+  #profile nav ul li a:hover {
+    background-color: #03baff;
+    color: #fff;
+  }
+  #logo-image {
+    width: 120px;
+    height: 120px;
+    border-left: solid 2px red;
+    border-top: solid 2px red;
+    border-right: solid 2px white;
+    border-bottom: solid 2px white;
+  }
+  #about p {
+    font-size: 10px;
+    margin-top: -40%;
+  }
+  #about .progress {
+    margin-bottom: 30px;
+  }
+  /*
+  .header {
+    position: fixed;
+    top: 0;
+    
+  }*/
+ /* .f-sh:not(#profile) {
+    display: none;
+  }*/
+  .f-sh {
+    min-height: 600px;
+    padding: 100px 0;
+    width: 100%;
+    align-items: center;
+  }
+  #skils, #project {
+    width: 50%;
+  }
+  #skils p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  .top-main div {
+    width: 50%;
+  }
+  #slide-container {
+    width: 50%;
+    margin-left: 25%;
+    display: flex;
+    overflow-x: hidden;
+  }
+  #slide-container img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  #contact {
+    justify-content: center;
+  }
+  #contact iframe {
+    width: 300px;
+    height: 300px;
+  }
+  #footer p {
+    margin: 0;
+  }
+}

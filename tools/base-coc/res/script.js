@@ -2,7 +2,7 @@ function show(self){
   var i = $(self).html().toLowerCase();
   var c = 0;
   $("#root .base-card").remove();
-  $.getJSON(`//fiandev.github.io/tools/base-coc/data/${i}.json`,function(data){
+  $.getJSON(`https://fiandev.github.io/tools/base-coc/data/${i}.json`,function(data){
     data.title.forEach((d,i) => {
       let title = d;
       let thumbnail = data.thumbnail[i];

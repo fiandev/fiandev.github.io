@@ -17,6 +17,13 @@
 .f-sh-mobile {
   padding: 30px 0;
 }
+#profile .my-hastag a {
+  color: #fff;
+  text-transform: capitalize;
+}
+#profile .my-hastag a:hover {
+  color: #42445A;
+}
 #profile nav {
   overflow-x: hidden;
 }
@@ -26,10 +33,10 @@
 #profile nav {
   transition: 1s;
   width: 60%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #fff;
-  position: absolute;
-  top: -10px;
+  position: fixed;
+  top: 0px;
   left: 0;
   z-index: 2;
   transform: translateX(-300%);
@@ -38,9 +45,10 @@
   width: 100%;
   background-color: #fff;
   margin-left: 0%;
+  margin-top: 5px;
 }
 #profile nav ul li {
-  margin-left: -15%;
+  margin-left: -16%;
   text-align: left;
 }
 #profile nav ul li a{
@@ -51,14 +59,20 @@
   text-decoration: none;
   transition: .5s;
 }
-#profile ul li a:hover {
+#profile nav ul li a:hover {
   background-color: skyblue;
   text-align: center;
   position: relative;
-  box-shadow: 1px 3px 1px 1px #000;
+  border-left: solid 5px #0072DF;
+}
+#profile nav ul li a:visited, #profile ul li a.active {
+  text-align: center;
+  background-color: skyblue;
+  position: relative;
+  border-left: solid 5px #0072DF;
 }
 #about p {
-  font-size: .6rem;
+  font-size: .8rem;
 }
 #logo-image {
   width: 85px;
@@ -106,6 +120,9 @@
 #slide-container img {
   height: 80vh;
   width: 100%;
+}
+#form-contact {
+  border-radius: 10px;
 }
   #footer p {
     margin: 0;

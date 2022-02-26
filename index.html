@@ -25,7 +25,7 @@
           <h1 class="d-none d-md-block logo-text float-md-start w-md-50 mt-md-2">FianDev</h1>
           <nav class="float-md-end w-md-50 mt-md-3">
             <ul class="d-md-flex justify-content-md-between">
-              <li><a href="#">profile</a></li>
+              <li><a href="#profile">profile</a></li>
               <li><a href="#about">about me</a></li>
               <li><a href="#main">main content</a></li>
               <li><a href="#contact">contact me</a></li>
@@ -97,9 +97,8 @@
             <img class="lazy-image first" src="/img/project1.jpg" />
             <img class="lazy-image" src="/img/project2.jpg" />
             <img class="lazy-image" src="/img/project3.jpg"  />
-            <img class="lazy-image" src="/img/project3.jpg"  />
-            <img class="lazy-image" src="/img/project2.jpg"  />
-            <img class="lazy-image" src="/img/project1.jpg"  />
+            <img class="lazy-image" src="/img/project4.jpg">
+            <img class="lazy-image" src="/img/project5.jpg">
           </div>
          </div>
        </div>
@@ -113,7 +112,7 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11990.233358345577!2d112.78126256535586!3d-7.2879312006722925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1644141692646!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" class="lazy-image"></iframe>
         </div>
         <div class="col col-md-6">
-          <form class="form-control" id="form-contact" action="" method="post" accept-charset="utf-8">
+          <form class="form-control px-2" id="form-contact" action="" method="post" accept-charset="utf-8">
             <label for="name" class="form">Name :</label>
             <input required class="form-control" type="text" name="name" id="name" value="" />
             <label for="email">Email :</label>
@@ -138,7 +137,13 @@
       $("host").html(window.location.hostname);
     </script>
     <script type="text/javascript" charset="utf-8">
-      let urlProject = [] // data from server if using php
+      let urlProject = [
+        "//fiandev.github.io/kimia/kalkulator-stoikiometri/",
+        "//fiandev.github.io/game/shooter-ball",
+        "//fiandev.github.io/tools/morse-konverter/",
+        "//fiandev.github.io/tools/base-coc/",
+        "//fiandev.github.io/tools/base-coc/"
+      ] // data from server if using php
       document.querySelectorAll("#slide-container img").forEach((e,i) => {
         e.addEventListener("click",function(){
           window.location.href=urlProject[i];

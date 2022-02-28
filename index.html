@@ -25,10 +25,17 @@
           <h1 class="d-none d-md-block logo-text float-md-start w-md-50 mt-md-2">FianDev</h1>
           <nav class="float-md-end w-md-50 mt-md-3">
             <ul class="d-md-flex justify-content-md-between">
-              <li><a href="#profile">profile</a></li>
-              <li><a href="#about">about me</a></li>
-              <li><a href="#main">main content</a></li>
-              <li><a href="#contact">contact me</a></li>
+              <li><a class="link" href="#">profile</a></li>
+              <li><a class="link" href="#about">about me</a></li>
+              <li><a class="link" href="#main">main content</a></li>
+              <li>
+                <div class="accordion">
+                  <details id="list-projects" class="accordion-item">
+                    <summary>My Projects <span class="marker"><i class="fa fa-sort-desc d-none d-md-block"></i></span></summary>
+                  </details>
+                </div>
+              </li>
+              <li><a class="link" href="#contact">contact</a></li>
             </ul>
           </nav>
         </div>
@@ -44,12 +51,18 @@
       </section>
       
       <!-- about -->
-      <section class="row f-sh f-sh-mobile text-center text-md-center" id="about">
-        <h3 class="">About Me</h3>
+      <section class="row f-sh f-sh-mobile" id="about">
+        <h3 class="text-center">About Me</h3>
         <div class="col col-12 col-md-6">
-          <p>Sebelumnya Terimakasih Saya ucapkan sudah mengunjungi web portofolio yang sangat sederhana ini.</p>
+          <p>
+            <b>Nama Lengkap : </b>Aditia Akbar Putra Alfiansa <br/>
+            <b>Nama Panggilan : </b>Fian <br/>
+            <b>Umur : </b>16 Tahun <br/>
+            <b>Hobi : </b> Ngoding, Ngegame, mempelajari hal baru <br/>
+          </p>
+           
         </div>
-        <div class="col col-12 col-md-6">
+        <div class="col col-12 col-md-6 text-center text-md-center">
           <p>Perkenalkan Nama Saya Aditia Akbar Putra Alfiansa. Berusia 16 tahun, biasanya dipanggil Fian. Saya memiliki hobi ngoding, karena menurut saya pribadi ngoding itu menyenangkan, walaupun sering terjadi Erorr tetapi saya tetap menyukainya.</p>
         </div>
       </section>
@@ -68,32 +81,36 @@
          <h3 class="d-block d-sm-none text-center">My Sklis</h3>
           <p>HTML 90/100</p>
           <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <p>Javascript 80/100</p>
           <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <p>PHP 15/100</p>
           <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar"  aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar"  aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <p>CSS 85/100</p>
           <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <p>jQuery 50/100</p>
           <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar"  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar"  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <p>Bootstrap 80/100</p>
           <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar"  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar"  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </div>
         <div class="float-md-end f-sh-mobile px-md-3" id="project">
           <h3 class="d-block d-sm-none text-center">My Projects</h3>
           <div id="slide-container" class="">
+            <div class="controller">
+              <span><i onclick="slidePrevious()" class="fa fa-arrow-left"></i></span>
+              <span><i onclick="slideNext()" class="fa fa-arrow-right"></i></span>
+            </div>
             <img class="lazy-image first" src="/img/project1.jpg" />
             <img class="lazy-image" src="/img/project2.jpg" />
             <img class="lazy-image" src="/img/project3.jpg"  />
@@ -112,21 +129,21 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11990.233358345577!2d112.78126256535586!3d-7.2879312006722925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1644141692646!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" class="lazy-image"></iframe>
         </div>
         <div class="col col-md-6">
-          <form class="form-control px-2" id="form-contact" action="" method="post" accept-charset="utf-8">
-            <label for="name" class="form">Name :</label>
+          <form class="px-2" id="form-contact" action="" method="post" accept-charset="utf-8">
+            <label class="py-2" for="name" class="form">Name :</label>
             <input required class="form-control" type="text" name="name" id="name" value="" />
-            <label for="email">Email :</label>
+            <label class="py-2" for="email">Email :</label>
             <input required class="form-control" type="email" name="email" id="email" value="" />
-            <label for="Message">Message :</label>
+            <label class="py-2" for="Message">Message :</label>
             <textarea required class="form-control" name="message" id=message rows="8" cols="40"></textarea>
-            <button class="my-2 btn btn-outline-primary" name="submit" type="submit">submit</button>
+            <button class="my-2 btn btn-light btn-outline-primary" name="submit" type="submit">submit</button>
           </form>
         </div>
       </section>
       
       <!-- footer -->
       <section class="text-md-center text-center" id="footer">
-        <p>&copy; <y></y> | FianDev @ <host></host></p>
+        <p>&copy; <y></y> built with <i class="fa fa-heart text-danger"></i> by fiandev</p>
         <p>All Rights Reserved</p>
       </section>
     </div>
@@ -134,7 +151,6 @@
     <script src="/res/script.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
       $("y").html(new Date().getFullYear());
-      $("host").html(window.location.hostname);
     </script>
     <script type="text/javascript" charset="utf-8">
       let urlProject = [
@@ -142,14 +158,16 @@
         "//fiandev.github.io/game/shooter-ball",
         "//fiandev.github.io/tools/morse-konverter/",
         "//fiandev.github.io/tools/base-coc/",
-        "//fiandev.github.io/tools/base-coc/"
-      ] // data from server if using php
+        "//fiandev.github.io/kimia/kalkulator-momentum/"
+      ]; // data from server if using php
+      let nama_projects = ["kalkulator stoikiometri","shooter ball", "morse konverter","base-coc","kalkulator momentum"];
+      /*
       document.querySelectorAll("#slide-container img").forEach((e,i) => {
         e.addEventListener("click",function(){
           window.location.href=urlProject[i];
         })
       })
-      
+      */
       $(document).ready(function(){
         document.querySelectorAll(".progress .progress-bar").forEach((e) => {
           let w = e.getAttribute("aria-valuenow");
@@ -164,18 +182,41 @@
       var counter = 0;
       let e = document.querySelectorAll("#slide-container img");
       let f = document.querySelector("#slide-container .first");
-      setInterval(() => {
-        if (counter >= e.length) {
-          f.style.marginLeft=`0`;
+      function slideNext() {
+        if (counter >= e.length - 1) {
+          f.style.marginLeft=`0%`;
           counter = 0;
         } else {
-          f.style.marginLeft=`-${counter}00%`;
           counter++;
-          console.log(counter);
+          f.style.marginLeft=`-${counter}00%`;
+          
         }
-      },1000)
+      }
+      function slidePrevious() {
+        if (counter <= 0) {
+          f.style.marginLeft=`-${e.length - 1}00%`;
+          counter = e.length;
+          console.log(counter)
+        } else {
+          counter--;
+          f.style.marginLeft=`-${counter}00%`;
+          
+        }
+      }
+      nama_projects.forEach((n, i) => {
+        document.querySelector("#list-projects").insertAdjacentHTML("beforeend",`
+        <div class="accordion-content">
+            <a href="${urlProject[i]}">
+              <p>${n}</p>
+            </a>
+        </div>`);
+      })
       
-      
+      $(document).ready(function(){
+        document.querySelectorAll(".progress-bar").forEach((e) => {
+         e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
+        })
+      })
     </script>
   </body>
 </html>

@@ -12,6 +12,9 @@ ul li {
 a {
   text-decoration: none;
 }
+.accordion-content a {
+  color: #000;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) 
 { 
@@ -20,14 +23,14 @@ a {
     background-color: #03baff;
     background-image: url('/img/wave.svg');
     background-position: bottom;
-    background-size: 10px cover;
+    background-size: 0 cover;
     background-repeat: no-repeat;
   }
   #about, #contact {
     background-color: #16fb98;
     background-image: url('/img/wave2.svg');
     background-position: bottom;
-    background-size: 10px cover;
+    background-size: 0 cover;
     background-repeat: no-repeat;
   }
   .header {
@@ -44,14 +47,15 @@ a {
   #profile nav ul li {
     margin: auto .5rem;
   }
-  #profile nav ul li a {
+  #profile nav ul li .link {
     display: inline-block;
     padding: 5px 10px;
     background-color: #fff;
     text-decoration: none;
     color: #000;
   }
-  #profile nav ul li a:hover {
+  #profile nav ul li a.link:hover,
+  #profile nav ul li a.active {
     background-color: #03baff;
     color: #fff;
   }
@@ -117,4 +121,112 @@ a {
   #footer p {
     margin: 0;
   }
-}
+    /* accrodion */
+  .accordion {
+    position: relative;
+    margin: auto .5rem;
+    padding: 5px 50px;
+    box-sizing: border-box;
+  }
+  .accordion-item {
+    margin-top: -10px; 
+    position: absolute;
+    padding: 0 5px;
+    top: 0;
+    right: 0;
+    left: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    
+  }
+  .accordion-item summary::-webkit-details-marker {
+    display: none;
+  }
+  .accordion-item summary {
+    padding: 5px 0px;
+    border: none;
+    outline: none;
+  }
+  .accordion-content {
+    display: flex;
+    align-items: center;
+    padding: 5% 2px;
+    justify-content: start;
+    font-size: 15px;
+    background-color: #fff;
+    transition: all .5s ease-in;
+  }
+  .accordion-content p {
+    margin: 0;
+  }
+  .accordion-item[open] .accordion-content:hover {
+    justify-content: center;
+    background-color: skyblue;
+    text-align: center;
+    position: relative;
+    border-left: solid 5px #0072DF;
+  }
+  .marker {
+    position: absolute;
+    top: 8px;
+    right: 10%;
+  }
+  .marker:before, .marker:after {
+    /*
+    content: "";
+    position: absolute;
+    top: 0%;;
+    height: 12px;
+    width: 2px;
+    background-color: #000;
+    transform: rotate(90deg);
+    transition: .5s;
+    */
+  }
+  .marker i {
+    transform: rotate(180deg);
+  }
+  .accordion-item:not([open]) .marker:after,
+  .accordion-item:not([open]) .marker i {
+    transform: rotate(0deg);
+  }
+  .accordion-item.accordion-item:not([open]) .accordion-content {
+    height: 0;
+  }
+  .accordion-item[open] .accordion-content {
+    height: calc(100% + 10px);
+    width: calc(200% + 9%);
+    margin-left: -5px;
+  }
+  .accordion-item[open], 
+  .accordion-item[open] .accordion-content{
+    background-color: #eee;
+  }
+  .accordion-item[open] summary {
+    border-radius: 0;
+  }
+  .accordion-item[open] .accordion-content:last-child {
+    border-radius: 0 0px 5px 5px;
+  }
+  .accordion-item[open] .accordion-content:nth-child(2) {
+    border-radius: 0 5px 0 0;
+  }
+    #slide-container {
+    position: relative;
+  }
+  #slide-container .controller {
+    display: flex;
+    position: absolute;
+    top: calc(50% - 20px);
+    width: 100%;
+    justify-content: space-between;
+    font-size: 1.3rem;
+  }
+  #slide-container .controller i {
+    padding: 20px 5px;
+    background-color: #000;
+    opacity: .4;
+    color: #fff;
+  }
+} /* end */

@@ -19,10 +19,11 @@ $(".burger").on("click", function(){
   
   $("#profile nav").css("transform","translateX(0)");
   $("body").append(`<div class="anu" onclick="hide_sideNav()" style="position: fixed; top: 0;bottom:0;left:0;right:0; background-color:#000; z-index:1;opacity:.6;"></div>`);
-  $("#profile nav ul").on("click",function(){
+  $("#profile nav ul a").on("click",function(){
     hide_sideNav();
   })
 })
+
 $("#profile nav ul li a").on("click",function(){
   $("#profile nav ul li a").removeClass("active");
   $(this).addClass("active");
@@ -73,3 +74,6 @@ setTimeout(function() {
 
 $("#form-contact").attr("action","http://localhost:8080/api/login.php");
 $("#form-contact").append(`<input type="hidden" name="urlSender" value="${window.location.href}" />`)
+
+
+

@@ -195,7 +195,7 @@
   .marker:before, .marker:after {
     content: "";
     position: absolute;
-    top: 50%;;
+    top: 50%;
     height: 12px;
     width: 2px;
     background-color: #000;

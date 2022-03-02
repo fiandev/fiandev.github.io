@@ -125,7 +125,7 @@ a {
   .accordion {
     position: relative;
     margin: auto .5rem;
-    padding: 5px 50px;
+    padding: 5px 60px;
     box-sizing: border-box;
   }
   .accordion-item {
@@ -212,7 +212,7 @@ a {
   .accordion-item[open] .accordion-content:nth-child(2) {
     border-radius: 0 5px 0 0;
   }
-    #slide-container {
+  #slide-container {
     position: relative;
   }
   #slide-container .controller {

@@ -141,8 +141,8 @@
   .accordion-item:before {
     content: "";
     position: absolute;
-    z-index: -1;
-    top: 35px;
+    z-index: 1;
+    top: 40px;
     height: 2px;
     bottom: 0;
     width: 0;
@@ -164,9 +164,6 @@
   }
   .accordion-item summary::-webkit-details-marker {
     display: none;
-  }
-  .accordion-item[open]:before {
-    width: 100%;
   }
   .accordion-content {
     display: flex;

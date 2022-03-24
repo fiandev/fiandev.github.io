@@ -14,7 +14,11 @@
     
   </head>
   <body>
-    <div class="container mx-auto">
+    <div class="container position-relative mx-auto">
+      <!-- preload -->
+      <div class="preload">
+        <div class="spiner"></div>
+      </div>
       <!-- profile -->
       <section class="row mt-2 f-sh f-sh-mobile" id="profile">
         <div class="col col-12 header col-md-12 clearfix">
@@ -102,6 +106,10 @@
           <div class="progress">
             <div class="progress-bar" role="progressbar"  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
+          <p>Tailwind 80/100</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar"  aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
         </div>
         <div class="float-md-end f-sh-mobile px-md-3" id="project">
           <h3 class="d-block d-sm-none text-center">My Projects</h3>
@@ -157,7 +165,7 @@
         "//fiandev.github.io/game/shooter-ball",
         "//fiandev.github.io/tools/morse-konverter/",
         "//fiandev.github.io/tools/base-coc/",
-        "//fiandev.github.io/kimia/kalkulator-momentum/"
+        "//fiandev.github.io/kimia/kalkulator-massa_unsur/"
       ]; // data from server if using php
       let nama_projects = ["kalkulator stoikiometri","shooter ball", "morse konverter","base-coc","kalkulator momentum"];
       /*
@@ -216,6 +224,7 @@
          e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
         })
       })
+      
     </script>
   </body>
 </html>

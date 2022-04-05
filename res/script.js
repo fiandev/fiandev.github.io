@@ -1,5 +1,6 @@
 var counter_slider_project = 0;
 var a = 0;
+const skills_div = document.querySelector("#skils");
 function slider_project(){
   try {
     let items = document.querySelectorAll("#slide-container img");
@@ -76,4 +77,9 @@ $("#form-contact").attr("action","http://localhost:8080/api/login.php");
 $("#form-contact").append(`<input type="hidden" name="urlSender" value="${window.location.href}" />`)
 
 
-
+function progressEffect(){
+  document.querySelectorAll(".progress-bar").forEach((e) => {
+      e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
+      e.style.animation="progress 2s linear";
+   })
+}

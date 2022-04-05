@@ -81,35 +81,58 @@
        </div>
        <div class="col col-md-12">
         <div class="float-md-start px-md-3 f-sh-mobile" id="skils">
-         <h3 class="d-block d-sm-none text-center">My Sklis</h3>
-          <p>HTML 90/100</p>
+         <h3 class="d-block d-sm-none text-center">My Skils</h3>
+         <div class="progressSkils">
+          <p>HTML 95/100</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>CSS 95/100</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>Javascript 90/100</p>
           <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          <p>Javascript 80/100</p>
+          <p>Bootstrap 90/100</p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          <p>PHP 15/100</p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar"  aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <p>CSS 85/100</p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <p>jQuery 50/100</p>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar"  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-          <p>Bootstrap 80/100</p>
+          <p>jQuery 80/100</p>
           <div class="progress">
             <div class="progress-bar" role="progressbar"  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
-          <p>Tailwind 80/100</p>
+          <p>Tailwind 90/100</p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar"  aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar"  aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
+          <p>PHP 30/100</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar"  aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>Reactjs 5/100</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar"  aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>Reactjs 5/100</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar"  aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>Reactjs 5/100</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar"  aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>Reactjs 5/100</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar"  aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>Reactjs 5/100</p>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar"  aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+           
+         </div>
         </div>
         <div class="float-md-end f-sh-mobile px-md-3" id="project">
           <h3 class="d-block d-sm-none text-center">My Projects</h3>
@@ -137,7 +160,7 @@
         </div>
         <div class="col col-md-6">
           <form class="px-2" id="form-contact" action="" method="post" accept-charset="utf-8">
-            <label class="py-2" for="name" class="form">Name :</label>
+            <label class="py-2 form" for="name">Name :</label>
             <input required class="form-control" type="text" name="name" id="name" value="" />
             <label class="py-2" for="email">Email :</label>
             <input required class="form-control" type="email" name="email" id="email" value="" />
@@ -167,7 +190,13 @@
         "//fiandev.github.io/base-coc/",
         "//fiandev.github.io/kimia/kalkulator-massa_unsur/"
       ]; // data from server if using php
-      let nama_projects = ["kalkulator stoikiometri","shooter ball", "morse konverter","base-coc","kalkulator momentum"];
+      let nama_projects = [
+        "kalkulator stoikiometri",
+        "shooter ball", 
+        "morse konverter",
+        "base coc",
+        "kalkulator massa unsur"
+        ];
       /*
       document.querySelectorAll("#slide-container img").forEach((e,i) => {
         e.addEventListener("click",function(){
@@ -220,10 +249,9 @@
       })
       
       $(document).ready(function(){
-        document.querySelectorAll(".progress-bar").forEach((e) => {
-         e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
-        })
+        progressEffect();
       })
+      
       
     </script>
   </body>

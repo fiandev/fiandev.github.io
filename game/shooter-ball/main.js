@@ -107,8 +107,8 @@ let enemies = []
 let particels = []
 var animationId;
 var score = 0;
-let opening, ending
-if (lastScore != "undefined") {
+let opening, spawning
+if (lastScore) {
   score = parseInt(lastScore)
   bigScore.innerHTML = lastScore
 }
@@ -116,7 +116,7 @@ if (lastScore != "undefined") {
 
 function spawnEnemies() {
   //console.log(cdSpawn)
-  setInterval(() => {
+  spawning = setInterval(() => {
     const radius = Math.random() * (30 - 4) + 4
     let x,y
     if (Math.random() < 0.5) {
@@ -183,9 +183,9 @@ function animate(){
           
       cancelAnimationFrame(animationId)
       score_result.innerHTML = `Game Over!`;
-      
       localStorage.setItem("lastScore", score)
-      popUp.style.display="block"
+      clearInterval(spawning)
+      popUp.style.display="block";
     }
     projectiles.forEach((projectile, projectileIndex) => {
     const dist = Math.hypot(projectile.x - enemy.x, projectile.y - enemy.y)
@@ -221,21 +221,9 @@ function animate(){
 function yes(){
   popUp.style.display="none"
   scoreboard.style.display="block"
-  clearInterval(ending)
+  //clearInterval(ending)
   clearInterval(opening)
   init()
-}
-function no(){
-  localStorage.setItem("lastScore",0)
-  let body = document.querySelector("body")
-      let element = `
-      <div class="popUp">
-      <h1>${score}</h1>
-      <p>score</p>
-      <button onclick="yes()" >play</button>
-      </div>`;
-      
-      body.insertAdjacentHTML("beforeend", element)
 }
 opening = setInterval(() => {
     const radius = Math.random() * (30 - 4) + 4

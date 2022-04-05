@@ -244,6 +244,10 @@
     position: relative;
     transform: scale(1.2);
   }
+  .progressSkils {
+    max-height: 30vh;
+    overflow-y: scroll;
+  }
 } 
 /* end */
 .progress-bar {

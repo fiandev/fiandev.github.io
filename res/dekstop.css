@@ -40,6 +40,7 @@ a {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
   }
   .burger,.header-mobile {
     display: none;
@@ -228,5 +229,9 @@ a {
     background-color: #000;
     opacity: .4;
     color: #fff;
+  }
+  .progressSkils {
+    max-height: 60vh;
+    overflow-y: scroll;
   }
 } /* end */

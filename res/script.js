@@ -77,19 +77,7 @@ $("#form-contact").attr("action","http://localhost:8080/api/login.php");
 $("#form-contact").append(`<input type="hidden" name="urlSender" value="${window.location.href}" />`)
 
 
-function progressEffect(){
-  document.querySelectorAll(".progress-bar").forEach((e) => {
-      e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
-      e.style.animation="progress 2s linear";
-   })
-}
-
 $(document).ready(function(){
-  document.querySelectorAll(".progress .progress-bar").forEach((e) => {
-    let w = e.getAttribute("aria-valuenow");
-    e.style.width=`${w}%`;
-   })
-  progressEffect();
  document.querySelectorAll(".my-hastag a").forEach((e) => {
    let h = e.innerHTML || e.innerText;
    e.href=`//google.com/search?q=${h}`;

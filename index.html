@@ -191,6 +191,14 @@
             </a>
         </div>`);
       })
+      document.querySelectorAll(".progress .progress-bar").forEach((e) => {
+        let w = e.getAttribute("aria-valuenow");
+        e.style.width=`${w}%`;
+       })
+      document.querySelectorAll(".progress-bar").forEach((e) => {
+          e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
+          e.style.animation="progress 2s linear";
+       })
       /*
       document.querySelectorAll("#slide-container img").forEach((e,i) => {
         e.addEventListener("click",function(){

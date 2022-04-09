@@ -85,9 +85,9 @@ $(document).ready(function(){
 })
 
 var counter = 0;
-let e = document.querySelectorAll("#slide-container img");
-let f = document.querySelector("#slide-container .first");
 function slideNext() {
+  let e = document.querySelectorAll("#slide-container img");
+  let f = document.querySelector("#slide-container .first");
   if (counter >= e.length - 1) {
     f.style.marginLeft=`0%`;
     counter = 0;
@@ -98,6 +98,8 @@ function slideNext() {
   }
 }
 function slidePrevious() {
+  let e = document.querySelectorAll("#slide-container img");
+  let f = document.querySelector("#slide-container .first");
   if (counter <= 0) {
     f.style.marginLeft=`-${e.length - 1}00%`;
     counter = e.length
@@ -151,6 +153,7 @@ nama_projects.forEach((n, i) => {
   } else {
     $("#slide-container").append(`<img class="lazy-image" src="/img/project${i + 1}.jpg" />`);
   }
+  
   document.querySelector("#list-projects").insertAdjacentHTML("beforeend",`
   <div class="accordion-content">
       <a href="${urlProject[i]}">

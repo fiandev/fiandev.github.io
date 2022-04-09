@@ -144,15 +144,23 @@
         <div class="col col-md-6 d-none d-md-block">
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11990.233358345577!2d112.78126256535586!3d-7.2879312006722925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1644141692646!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" class="lazy-image"></iframe>
         </div>
-        <div class="col col-md-6">
-          <form class="px-2" id="form-contact" action="" method="post" accept-charset="utf-8">
+        <div class="col col-md-6" id="form">
+          <div class="d-none alert-form alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Terima Kasih!</strong> pesan anda sudah saya terima
+            <button onclick="this.parentElement.classList.toggle('d-none')" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+          <form name="contact" class="px-2" id="form-contact" action="" method="post" accept-charset="utf-8">
             <label class="py-2 form" for="name">Name :</label>
-            <input required class="form-control" type="text" name="name" id="name" value="" />
+            <input required class="form-control" type="text" name="nama" id="name" value="" />
             <label class="py-2" for="email">Email :</label>
             <input required class="form-control" type="email" name="email" id="email" value="" />
             <label class="py-2" for="Message">Message :</label>
-            <textarea required class="form-control" name="message" id=message rows="8" cols="40"></textarea>
-            <button class="my-2 btn btn-outline-primary" name="submit" type="submit">submit</button>
+            <textarea required class="form-control" name="pesan" id=message rows="8" cols="40"></textarea>
+            <button class="btn-send my-2 btn btn-outline-primary" name="submit" type="submit">submit</button>
+            <button class="d-none my-2 btn-loading btn btn-primary" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
           </form>
         </div>
       </section>
@@ -199,6 +207,25 @@
           e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
           e.style.animation="progress 2s linear";
        })
+       const scriptURL = 'https://script.google.com/macros/s/AKfycbx76eAMvYuSwGjzG15OMNxbmnin53QObUqrs6dc-961V4MhZZntuQhp5d_dYVzGtSvZ-w/exec'
+      const form = document.forms['contact']
+      const btnSend = document.querySelector(".btn-send")
+      const btnLoading = document.querySelector(".btn-loading")
+      const alertForm = document.querySelector(".alert-form")
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        btnSend.classList.toggle("d-none")
+        btnLoading.classList.toggle("d-none")
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            btnSend.classList.toggle("d-none")
+            btnLoading.classList.toggle("d-none")
+            alertForm.classList.toggle("d-none")
+            form.reset();
+            console.log('Success!', response)
+           })
+          .catch(error => console.error('Error!', error.message))
+      })
       /*
       document.querySelectorAll("#slide-container img").forEach((e,i) => {
         e.addEventListener("click",function(){

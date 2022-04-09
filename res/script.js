@@ -13,7 +13,7 @@ function slider_project(){
       a += 100;
       items[0].style.marginLeft=`-${a}%`;
   } catch (e) {
-   alert(e)
+   console.log(e);
   }
 }
 $(".burger").on("click", function(){
@@ -82,4 +82,39 @@ function progressEffect(){
       e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
       e.style.animation="progress 2s linear";
    })
+}
+
+$(document).ready(function(){
+  document.querySelectorAll(".progress .progress-bar").forEach((e) => {
+    let w = e.getAttribute("aria-valuenow");
+    e.style.width=`${w}%`;
+   })
+  progressEffect();
+ document.querySelectorAll(".my-hastag a").forEach((e) => {
+   let h = e.innerHTML || e.innerText;
+   e.href=`//google.com/search?q=${h}`;
+ })
+})
+
+var counter = 0;
+let e = document.querySelectorAll("#slide-container img");
+let f = document.querySelector("#slide-container .first");
+function slideNext() {
+  if (counter >= e.length - 1) {
+    f.style.marginLeft=`0%`;
+    counter = 0;
+  } else {
+    counter++;
+    f.style.marginLeft=`-${counter}00%`;
+    
+  }
+}
+function slidePrevious() {
+  if (counter <= 0) {
+    f.style.marginLeft=`-${e.length - 1}00%`;
+    counter = e.length
+  } else {
+    counter--;
+    f.style.marginLeft=`-${counter}00%`;
+  }
 }

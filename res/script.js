@@ -106,3 +106,54 @@ function slidePrevious() {
     f.style.marginLeft=`-${counter}00%`;
   }
 }
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx76eAMvYuSwGjzG15OMNxbmnin53QObUqrs6dc-961V4MhZZntuQhp5d_dYVzGtSvZ-w/exec'
+const form = document.forms['contact']
+const btnSend = document.querySelector(".btn-send")
+const btnLoading = document.querySelector(".btn-loading")
+const alertForm = document.querySelector(".alert-form")
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  btnSend.classList.toggle("d-none")
+  btnLoading.classList.toggle("d-none")
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      btnSend.classList.toggle("d-none")
+      btnLoading.classList.toggle("d-none")
+      alertForm.classList.toggle("d-none")
+      form.reset();
+      console.log('Success!', response)
+     })
+    .catch(error => console.error('Error!', error.message))
+})
+
+
+let urlProject = [
+  "//fiandev.github.io/kimia/kalkulator-stoikiometri/",
+  "//fiandev.github.io/game/shooter-ball",
+  "//fiandev.github.io/tools/morse-konverter/",
+  "//fiandev.github.io/base-coc/",
+  "//fiandev.github.io/kimia/kalkulator-massa_unsur/"
+]; // data from server if using php
+let nama_projects = [
+  "kalkulator stoikiometri",
+  "shooter ball", 
+  "morse konverter",
+  "base coc",
+  "kalkulator massa unsur"
+  ];
+nama_projects.forEach((n, i) => {
+  document.querySelector("#list-projects").insertAdjacentHTML("beforeend",`
+  <div class="accordion-content">
+      <a href="${urlProject[i]}">
+        <p>${n}</p>
+      </a>
+  </div>`);
+})
+document.querySelectorAll(".progress .progress-bar").forEach((e) => {
+  let w = e.getAttribute("aria-valuenow");
+  e.style.width=`${w}%`;
+ })
+document.querySelectorAll(".progress-bar").forEach((e) => {
+    e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
+    e.style.animation="progress 2s linear";
+ })

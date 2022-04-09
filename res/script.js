@@ -153,7 +153,7 @@ nama_projects.forEach((n, i) => {
   } else {
     $("#slide-container").append(`<img class="lazy-image" src="/img/project${i + 1}.jpg" />`);
   }
-  
+  /* add list at side nav */
   document.querySelector("#list-projects").insertAdjacentHTML("beforeend",`
   <div class="accordion-content">
       <a href="${urlProject[i]}">
@@ -169,3 +169,4 @@ document.querySelectorAll(".progress-bar").forEach((e) => {
     e.style.backgroundColor=`hsl(${Math.random() * 360 }, 50%, 50%)`;
     e.style.animation="progress 2s linear";
  })
+ 

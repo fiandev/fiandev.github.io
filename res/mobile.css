@@ -40,6 +40,7 @@
   left: 0;
   z-index: 2;
   transform: translateX(-300%);
+  font-size: .7rem;
 }
 #profile nav ul {
   width: 100%;

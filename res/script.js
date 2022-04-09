@@ -132,16 +132,23 @@ let urlProject = [
   "//fiandev.github.io/game/shooter-ball",
   "//fiandev.github.io/tools/morse-konverter/",
   "//fiandev.github.io/base-coc/",
-  "//fiandev.github.io/kimia/kalkulator-massa_unsur/"
+  "//fiandev.github.io/kimia/kalkulator-massa_unsur/",
+  "//fiandev.github.io/tetris/"
 ]; // data from server if using php
 let nama_projects = [
   "kalkulator stoikiometri",
   "shooter ball", 
   "morse konverter",
   "base coc",
-  "kalkulator massa unsur"
+  "kalkulator massa unsur",
+  "tetris"
   ];
 nama_projects.forEach((n, i) => {
+  if (i == 0) {
+    $("#slide-container").append(`<img class="lazy-image first" src="/img/project${i + 1}.jpg" />`);
+  } else {
+    $("#slide-container").append(`<img class="lazy-image" src="/img/project${i + 1}.jpg" />`);
+  }
   document.querySelector("#list-projects").insertAdjacentHTML("beforeend",`
   <div class="accordion-content">
       <a href="${urlProject[i]}">

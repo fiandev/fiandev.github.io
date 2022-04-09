@@ -133,7 +133,8 @@ let urlProject = [
   "//fiandev.github.io/tools/morse-konverter/",
   "//fiandev.github.io/base-coc/",
   "//fiandev.github.io/kimia/kalkulator-massa_unsur/",
-  "//fiandev.github.io/tetris/"
+  "//fiandev.github.io/tetris/",
+  "//galery-website.herokuapp.com/"
 ]; // data from server if using php
 let nama_projects = [
   "kalkulator stoikiometri",
@@ -141,7 +142,8 @@ let nama_projects = [
   "morse konverter",
   "base coc",
   "kalkulator massa unsur",
-  "tetris"
+  "tetris",
+  "galery website"
   ];
 nama_projects.forEach((n, i) => {
   if (i == 0) {

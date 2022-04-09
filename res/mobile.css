@@ -75,6 +75,9 @@
 #about p {
   font-size: .8rem;
 }
+section .title {
+  font-size: 1rem;
+}
 #logo-image {
   width: 85px;
   height: 85px;

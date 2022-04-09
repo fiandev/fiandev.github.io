@@ -45,6 +45,9 @@ a {
   .burger,.header-mobile {
     display: none;
   }
+  section .title {
+    font-size: 1.4rem;
+  }
   #profile nav ul li {
     margin: auto .5rem;
   }
@@ -69,7 +72,7 @@ a {
     border-bottom: solid 2px white;
   }
   #about p {
-    font-size: 10px;
+    font-size: 1rem;
     margin-top: -40%;
   }
   #about .progress {
@@ -85,7 +88,7 @@ a {
     display: none;
   }*/
   .f-sh {
-    min-height: 600px;
+    min-height: 100vh;
     padding: 100px 0;
     width: 100%;
     align-items: center;

@@ -48,6 +48,9 @@ a {
   section .title {
     font-size: 1.4rem;
   }
+  #profile nav {
+    font-size: 1rem;
+  }
   #profile nav ul li {
     margin: auto .5rem;
   }

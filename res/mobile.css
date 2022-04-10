@@ -1,5 +1,8 @@
 @media (max-width: 575.98px)
 {
+  :root {
+    --fsMobile: .8rem;
+  }
   #profile {
     background-color: #03baff;
    /* background-image: url('/img/wave.svg');
@@ -20,6 +23,7 @@
 #profile .my-hastag a {
   color: #fff;
   text-transform: capitalize;
+  font-size: var(--fsMobile);
 }
 #profile .my-hastag a:hover {
   color: #42445A;
@@ -74,7 +78,7 @@
   border-left: solid 5px #0072DF;
 }
 #about p {
-  font-size: .8rem;
+  font-size: var(--fsMobile);
 }
 section .title {
   font-size: 1rem;
@@ -114,7 +118,7 @@ section .title {
 }
 #skils p {
   margin: 0px;
-  font-size: 15px;
+  font-size: var(--fsMobile);
 }
 #slide-container {
   overflow-x: hidden;

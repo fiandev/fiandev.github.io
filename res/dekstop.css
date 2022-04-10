@@ -18,6 +18,9 @@ a {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) 
 { 
+  :root {
+    --fsDesktop: 1.8rem;
+  }
   /* set background wave */
   #profile, #main {
     background-color: #03baff;
@@ -66,6 +69,9 @@ a {
     background-color: #03baff;
     color: #fff;
   }
+  .my-hastag {
+    font-size: var(--fsDesktop);
+  }
   #logo-image {
     width: 120px;
     height: 120px;
@@ -75,7 +81,7 @@ a {
     border-bottom: solid 2px white;
   }
   #about p {
-    font-size: 1rem;
+    font-size: var(--fsDesktop);
     margin-top: -40%;
   }
   #about .progress {
@@ -102,7 +108,7 @@ a {
   #skils p {
     margin: 0;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: var(--fsDesktop);
   }
   .top-main div {
     width: 50%;

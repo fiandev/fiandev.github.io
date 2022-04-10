@@ -19,7 +19,7 @@ a {
 @media (min-width: 576px) 
 { 
   :root {
-    --fsDesktop: 1.8rem;
+    --fsDesktop: 1.4rem;
   }
   /* set background wave */
   #profile, #main {
@@ -245,5 +245,6 @@ a {
   .progressSkils {
     max-height: 60vh;
     overflow-y: scroll;
+    font-size: var(--fsDesktop);
   }
 } /* end */

@@ -58,8 +58,20 @@ $(document).ready(function()
         // $(".header-mobile").css("position","fixed");
         }
     });
+    setInterval(showMyAge, 500)
 });
-
+function showMyAge(){
+  let birthday = new Date("june 13, 2005 11:00:00").getTime()
+  let now = new Date().getTime()
+  let time = new Date()
+  let distance = now - birthday
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + (days * 24)
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) + (hours * 60) +time.getMinutes();
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000) + (minutes * 60)
+  let y = Math.round(days / 365.25)
+  $("#myage").html(`${y} tahun / ${days} hari / ${hours} jam / ${minutes} menit / ${seconds} detik`)
+}
 function hide_sideNav(){
   $(".anu").remove();
   $("#profile nav").css("transform","translateX(-200%)");

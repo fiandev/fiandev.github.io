@@ -182,3 +182,21 @@ document.querySelectorAll(".progress-bar").forEach((e) => {
     e.style.animation="progress 2s linear";
  })
  
+let section = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll("nav .link");
+
+ window.onscroll = () => {
+  section.forEach((sec) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 200;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+    console.log(id);
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((links) => {
+        links.classList.remove("active");
+        document.querySelector("ul li a[href*=" + id + "]").classList.add("active");
+      });
+    }
+  });
+};

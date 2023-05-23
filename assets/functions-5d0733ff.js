@@ -1,0 +1,2 @@
+const t=()=>Math.floor(Math.random()*91+10),l=()=>`${t()}% ${t()}% ${t()}% ${t()}% / ${t()}% ${t()}% ${t()}% ${t()}%`,s=(r,n=null)=>({NODE_ENV:"production"})[r]?{NODE_ENV:"production"}[r]:n,c=(r=4)=>{let o="abcdefghijklmnopqrstuvwxyz1234566890".split(""),a="";for(let e=0;e<r;e++)a+=o[Math.floor(Math.random()*o.length)];return a},u=r=>{let n=new URL(window.location.href);return r?r===n.pathname:n.pathname};export{c as a,s as e,l as g,u as r};
+//# sourceMappingURL=functions-5d0733ff.js.map

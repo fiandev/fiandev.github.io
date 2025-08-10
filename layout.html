@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | [Nama Anda]</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0ea5e9;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #38bdf8;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #64748b;
+            width: 10px;
+            height: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #0ea5e9;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-slate-300">
+
+    <header class="bg-slate-900/70 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">[Nama Anda]</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="hover:text-sky-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors duration-300">Skills</a>
+                <a href="#experience" class="hover:text-sky-400 transition-colors duration-300">Experience</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors duration-300">Projects</a>
+                <a href="#contact"
+                    class="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contact
+                    Me</a>
+            </div>
+            <button class="md:hidden focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+
+        <section id="about" class="min-h-screen flex items-center py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div data-aos="fade-right" data-aos-duration="1000">
+                    <img src="https://placehold.co/600x600/1e293b/ffffff?text=Foto+Anda" alt="Foto [Nama Anda]"
+                        class="rounded-full shadow-lg shadow-sky-500/20 w-3/4 mx-auto md:w-full">
+                </div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Hi, I'm <span class="text-sky-400">[Nama
+                            Anda]</span></h1>
+                    <h2 class="text-2xl font-medium text-slate-400 mb-6">A Passionate Web Designer & Developer</h2>
+                    <p class="mb-6 leading-relaxed">Saya adalah seorang desainer web dengan pengalaman [Jumlah] tahun
+                        dalam menciptakan antarmuka pengguna yang indah, fungsional, dan modern. Saya bersemangat
+                        tentang desain minimalis, animasi yang interaktif, dan pengalaman pengguna yang intuitif.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact"
+                            class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105">Hire
+                            Me</a>
+                        <a href="#projects"
+                            class="border-2 border-slate-600 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">See
+                            My Work</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-16" data-aos="fade-up">My Tech Stack</h2>
+            <div class="flex justify-center space-x-2 md:space-x-4 mb-12" data-aos="fade-up" data-aos-delay="100">
+                <button
+                    class="tab-btn active-tab bg-sky-500 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300"
+                    data-tab="frontend">Frontend</button>
+                <button
+                    class="tab-btn text-slate-400 font-medium py-2 px-6 rounded-lg hover:bg-slate-800 hover:text-slate-200 transition-colors duration-300"
+                    data-tab="backend">Backend</button>
+                <button
+                    class="tab-btn text-slate-400 font-medium py-2 px-6 rounded-lg hover:bg-slate-800 hover:text-slate-200 transition-colors duration-300"
+                    data-tab="tools">Tools</button>
+            </div>
+            <div id="skills-content" data-aos="fade-up" data-aos-delay="200">
+                <div id="frontend" class="tab-panel active-panel">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-html5-plain-wordmark text-5xl text-orange-500"></i>
+                            <p>HTML5</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-css3-plain-wordmark text-5xl text-blue-500"></i>
+                            <p>CSS3</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-javascript-plain text-5xl text-yellow-400"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-tailwindcss-plain text-5xl text-teal-400"></i>
+                            <p>Tailwind CSS</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-react-original-wordmark text-5xl text-sky-400"></i>
+                            <p>React</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-vuejs-plain-wordmark text-5xl text-green-500"></i>
+                            <p>Vue.js</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="backend" class="tab-panel hidden">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-nodejs-plain-wordmark text-5xl text-green-500"></i>
+                            <p>Node.js</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-express-original-wordmark text-5xl"></i>
+                            <p>Express</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-php-plain text-5xl text-indigo-400"></i>
+                            <p>PHP</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-laravel-plain-wordmark text-5xl text-red-500"></i>
+                            <p>Laravel</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-mysql-plain-wordmark text-5xl text-blue-400"></i>
+                            <p>MySQL</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-mongodb-plain-wordmark text-5xl text-green-400"></i>
+                            <p>MongoDB</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tools" class="tab-panel hidden">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-git-plain-wordmark text-5xl text-red-500"></i>
+                            <p>Git</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-github-original-wordmark text-5xl"></i>
+                            <p>GitHub</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-figma-plain text-5xl text-purple-500"></i>
+                            <p>Figma</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-vscode-plain-wordmark text-5xl text-sky-500"></i>
+                            <p>VS Code</p>
+                        </div>
+                        <div
+                            class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                            <i class="devicon-docker-plain-wordmark text-5xl text-blue-600"></i>
+                            <p>Docker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-16" data-aos="fade-up">Experience & Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div data-aos="fade-up" data-aos-duration="800">
+                    <h3 class="text-2xl font-bold text-sky-400 mb-8 flex items-center gap-3"><i
+                            class="fas fa-briefcase"></i> Experience</h3>
+                    <div
+                        class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-600 before:to-transparent">
+                        <div
+                            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div
+                                class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-sky-500 bg-slate-800 group-hover:bg-sky-500 transition-colors duration-300 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div
+                                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-sky-500/20 transition-shadow duration-300">
+                                <div class="flex items-center justify-between space-x-2 mb-1">
+                                    <h4 class="font-bold text-white">Senior Web Designer</h4><time
+                                        class="font-caveat font-medium text-sky-400">2022 - Present</time>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-2">Tech Solutions Inc.</p>
+                                <p class="text-slate-400 text-sm">Bertanggung jawab atas desain UI/UX untuk platform
+                                    SaaS utama perusahaan dan memimpin tim desainer junior.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold text-sky-400 mb-8 flex items-center gap-3"><i
+                            class="fas fa-graduation-cap"></i> Education</h3>
+                    <div
+                        class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-600 before:to-transparent">
+                        <div
+                            class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                            <div
+                                class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-sky-500 bg-slate-800 group-hover:bg-sky-500 transition-colors duration-300 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div
+                                class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-sky-500/20 transition-shadow duration-300">
+                                <div class="flex items-center justify-between space-x-2 mb-1">
+                                    <h4 class="font-bold text-white">S1 Teknik Informatika</h4><time
+                                        class="font-caveat font-medium text-sky-400">2016 - 2020</time>
+                                </div>
+                                <p class="text-sm text-slate-400 mb-2">Universitas [Nama Universitas]</p>
+                                <p class="text-slate-400 text-sm">Fokus pada rekayasa perangkat lunak, desain antarmuka,
+                                    dan kecerdasan buatan. Lulus dengan predikat Cum Laude.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-16" data-aos="fade-up">My Projects</h2>
+            <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper pb-16">
+                    <div class="swiper-slide">
+                        <div class="bg-slate-800 rounded-lg overflow-hidden group h-full flex flex-col">
+                            <div class="overflow-hidden">
+                                <img src="https://placehold.co/600x400/1e293b/0ea5e9?text=Project+1" alt="Project 1"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-white mb-2">Nama Proyek 1</h3>
+                                <p class="text-slate-400 mb-4 flex-grow">Deskripsi singkat tentang proyek ini, teknologi
+                                    yang digunakan, dan peran Anda.</p>
+                                <div class="flex space-x-4 mt-auto">
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">Live
+                                        Demo <i class="fas fa-external-link-alt text-sm"></i></a>
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">GitHub
+                                        <i class="fab fa-github text-sm"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-slate-800 rounded-lg overflow-hidden group h-full flex flex-col">
+                            <div class="overflow-hidden">
+                                <img src="https://placehold.co/600x400/1e293b/0ea5e9?text=Project+1" alt="Project 1"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-white mb-2">Nama Proyek 1</h3>
+                                <p class="text-slate-400 mb-4 flex-grow">Deskripsi singkat tentang proyek ini, teknologi
+                                    yang digunakan, dan peran Anda.</p>
+                                <div class="flex space-x-4 mt-auto">
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">Live
+                                        Demo <i class="fas fa-external-link-alt text-sm"></i></a>
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">GitHub
+                                        <i class="fab fa-github text-sm"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-slate-800 rounded-lg overflow-hidden group h-full flex flex-col">
+                            <div class="overflow-hidden">
+                                <img src="https://placehold.co/600x400/1e293b/0ea5e9?text=Project+1" alt="Project 1"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-white mb-2">Nama Proyek 1</h3>
+                                <p class="text-slate-400 mb-4 flex-grow">Deskripsi singkat tentang proyek ini, teknologi
+                                    yang digunakan, dan peran Anda.</p>
+                                <div class="flex space-x-4 mt-auto">
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">Live
+                                        Demo <i class="fas fa-external-link-alt text-sm"></i></a>
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">GitHub
+                                        <i class="fab fa-github text-sm"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-slate-800 rounded-lg overflow-hidden group h-full flex flex-col">
+                            <div class="overflow-hidden">
+                                <img src="https://placehold.co/600x400/1e293b/0ea5e9?text=Project+1" alt="Project 1"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-white mb-2">Nama Proyek 1</h3>
+                                <p class="text-slate-400 mb-4 flex-grow">Deskripsi singkat tentang proyek ini, teknologi
+                                    yang digunakan, dan peran Anda.</p>
+                                <div class="flex space-x-4 mt-auto">
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">Live
+                                        Demo <i class="fas fa-external-link-alt text-sm"></i></a>
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">GitHub
+                                        <i class="fab fa-github text-sm"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-slate-800 rounded-lg overflow-hidden group h-full flex flex-col">
+                            <div class="overflow-hidden">
+                                <img src="https://placehold.co/600x400/1e293b/0ea5e9?text=Project+2" alt="Project 2"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold text-white mb-2">Nama Proyek 2</h3>
+                                <p class="text-slate-400 mb-4 flex-grow">Deskripsi singkat tentang proyek ini, teknologi
+                                    yang digunakan, dan peran Anda.</p>
+                                <div class="flex space-x-4 mt-auto">
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">Live
+                                        Demo <i class="fas fa-external-link-alt text-sm"></i></a>
+                                    <a href="#"
+                                        class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">GitHub
+                                        <i class="fab fa-github text-sm"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-4" data-aos="fade-up">Get In Touch</h2>
+            <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Punya
+                proyek atau ide menarik? Saya akan senang mendengarnya. Kirimkan saya pesan dan mari kita wujudkan ide
+                Anda.</p>
+            <form action="#" method="POST" class="max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div><label for="name" class="block text-slate-400 mb-2">Name</label><input type="text" id="name"
+                            name="name"
+                            class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300"
+                            required></div>
+                    <div><label for="email" class="block text-slate-400 mb-2">Email</label><input type="email"
+                            id="email" name="email"
+                            class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300"
+                            required></div>
+                </div>
+                <div class="mb-6"><label for="message" class="block text-slate-400 mb-2">Message</label><textarea
+                        id="message" name="message" rows="5"
+                        class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-shadow duration-300"
+                        required></textarea></div>
+                <div class="text-center"><button type="submit"
+                        class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-lg transition-transform duration-300 hover:scale-105">Send
+                        Message</button></div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800/50">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-sky-400 transition-colors duration-300 text-2xl"><i
+                        class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-sky-400 transition-colors duration-300 text-2xl"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-sky-400 transition-colors duration-300 text-2xl"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 [Nama Anda]. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="chat-widget-container" class="fixed bottom-6 right-6 z-50">
+        <button id="chat-open-btn"
+            class="bg-sky-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center transform hover:scale-110 transition-transform duration-300"><i
+                class="fas fa-comment-dots text-2xl"></i></button>
+        <div id="chat-window"
+            class="hidden w-80 sm:w-96 h-[32rem] bg-slate-800/80 backdrop-blur-md rounded-xl shadow-2xl flex flex-col transform transition-all duration-300 opacity-0 scale-95">
+            <div class="flex items-center justify-between p-4 bg-slate-900 rounded-t-xl">
+                <div class="flex items-center space-x-3">
+                    <div class="relative"><img src="https://placehold.co/40x40/1e293b/ffffff?text=AI" alt="AI Avatar"
+                            class="w-10 h-10 rounded-full"><span
+                            class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-slate-900 rounded-full"></span>
+                    </div>
+                    <div>
+                        <p class="font-bold text-white">AI Assistant</p>
+                        <p class="text-xs text-slate-400">Online</p>
+                    </div>
+                </div>
+                <button id="chat-close-btn" class="text-slate-400 hover:text-white"><i
+                        class="fas fa-times text-xl"></i></button>
+            </div>
+            <div id="chat-messages" class="flex-1 p-4 space-y-4 overflow-y-auto">
+                <div class="flex">
+                    <div class="bg-slate-700 text-white p-3 rounded-lg max-w-xs">
+                        <p class="text-sm">Halo! Selamat datang di portofolio saya. Ada yang bisa saya bantu?</p>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <div class="bg-sky-600 text-white p-3 rounded-lg max-w-xs">
+                        <p class="text-sm">Wow, website kamu keren! Boleh tanya tentang proyekmu?</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="bg-slate-700 text-white p-3 rounded-lg max-w-xs">
+                        <p class="text-sm">Tentu saja! Silakan tanyakan apa saja. Saya siap menjawab.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 bg-slate-900 rounded-b-xl">
+                <div class="flex items-center space-x-2">
+                    <input type="text" placeholder="Ketik pesan Anda..."
+                        class="flex-1 bg-slate-700 border border-slate-600 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
+                    <button
+                        class="bg-sky-500 text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center hover:bg-sky-600 transition-colors"><i
+                            class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({ once: true, duration: 800 });
+            var swiper = new Swiper(".mySwiper", { slidesPerView: 1, spaceBetween: 30, loop: true, autoplay: { delay: 2500, disableOnInteraction: false, pauseOnMouseEnter: true }, pagination: { el: ".swiper-pagination", clickable: true }, breakpoints: { 768: { slidesPerView: 2, spaceBetween: 30 }, 1024: { slidesPerView: 3, spaceBetween: 40 } } });
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => { btn.classList.remove('active-tab', 'bg-sky-500', 'text-white'); btn.classList.add('text-slate-400'); });
+                    button.classList.add('active-tab', 'bg-sky-500', 'text-white');
+                    button.classList.remove('text-slate-400');
+                    const targetTab = button.getAttribute('data-tab');
+                    tabPanels.forEach(panel => { panel.classList.add('hidden'); panel.classList.remove('active-panel'); });
+                    const activePanel = document.getElementById(targetTab);
+                    activePanel.classList.remove('hidden');
+                    activePanel.classList.add('active-panel');
+                });
+            });
+            const chatOpenBtn = document.getElementById('chat-open-btn');
+            const chatCloseBtn = document.getElementById('chat-close-btn');
+            const chatWindow = document.getElementById('chat-window');
+            if (chatOpenBtn && chatCloseBtn && chatWindow) {
+                chatOpenBtn.addEventListener('click', () => { chatWindow.classList.remove('hidden', 'opacity-0', 'scale-95'); chatOpenBtn.classList.add('hidden'); });
+                chatCloseBtn.addEventListener('click', () => { chatWindow.classList.add('opacity-0', 'scale-95'); setTimeout(() => { chatWindow.classList.add('hidden'); chatOpenBtn.classList.remove('hidden'); }, 300); });
+            }
+        });
+    </script>
+</body>
+
+</html>

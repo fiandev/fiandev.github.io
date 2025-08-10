@@ -1,5 +1,6 @@
 import "./assets/base.css";
 import "aos/dist/aos.css";
+import AOS from "aos";
 import "./assets/main.css";
 
 import { createPinia } from 'pinia'
@@ -10,3 +11,8 @@ const pinia = createPinia();
 const app = createApp(App);
 app.use(pinia);
 app.mount('#app');
+
+AOS.init({
+    once: true,
+    duration: 800,
+});

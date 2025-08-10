@@ -3,7 +3,9 @@ import { onMounted } from 'vue';
 import Swiper from 'swiper';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { useProjectsStore } from '@/stores/Projects';
-import "swiper/swiper-bundle.css";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 const projectsStore = useProjectsStore();
 
@@ -14,7 +16,7 @@ onMounted(() => {
         spaceBetween: 30,
         loop: true,
         autoplay: {
-            delay: 1000,
+            delay: 2500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true
         },

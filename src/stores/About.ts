@@ -19,7 +19,7 @@ export const useUserStore = defineStore('user', {
             },
             {
                 name: 'X',
-                url: 'https://x.com/fiandev'
+                url: 'https://x.com/im_fiandev'
             },
             {
                 name: 'Instagram',

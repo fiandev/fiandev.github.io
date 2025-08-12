@@ -12,7 +12,7 @@ const { name, overview, prophecy } = useUserStore()
                 <img src="https://placehold.co/600x600/1e293b/ffffff?text=Foto+Anda" alt="Foto [Nama Anda]"
                     class="rounded-full shadow-lg shadow-sky-500/20 w-3/4 mx-auto md:w-full">
             </div> -->
-            <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="w-3/4">
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="lg:w-3/4">
                 <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Hi, I'm <span class="text-sky-400">{{
                     name }}</span></h1>
                 <h2 class="text-2xl font-medium text-slate-400 mb-6">{{ prophecy }}</h2>

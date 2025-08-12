@@ -12,32 +12,39 @@ export const useProjectsStore = defineStore('projects', {
     state: () => ({
         projects: [
             {
-                name: 'Project Alpha',
-                description: 'A modern e-commerce platform built with Vue.js, Pinia, and Tailwind CSS, featuring a seamless shopping experience.',
-                imageUrl: 'https://placehold.co/600x400/1e293b/0ea5e9?text=Project+Alpha',
-                liveUrl: '#',
-                githubUrl: '#'
+                name: 'Fulhive',
+                description: 'web application for inventory management that is integrated with online marketplaces.',
+                imageUrl: 'https://ryucode.com/assets/img/projects/project_68752ea087233.png',
+                liveUrl: 'https://fulhive.com/',
+                githubUrl: ''
             },
             {
-                name: 'Project Beta',
-                description: 'A decentralized finance (DeFi) dashboard using React and Web3.js to track and manage crypto assets.',
-                imageUrl: 'https://placehold.co/600x400/1e293b/0ea5e9?text=Project+Beta',
-                liveUrl: '#',
-                githubUrl: '#'
+                name: 'Flexio',
+                description: 'A freelancer platform called Flexio with seller-buyer switch feature integrated with Xendit.',
+                imageUrl: 'https://ryucode.com/assets/img/projects/project_6874832cd567b.png',
+                liveUrl: 'https://flexio.id',
+                githubUrl: ''
             },
             {
-                name: 'Project Gamma',
-                description: 'A real-time chat application powered by Node.js, Express, and Socket.IO for instant communication.',
-                imageUrl: 'https://placehold.co/600x400/1e293b/0ea5e9?text=Project+Gamma',
-                liveUrl: '#',
-                githubUrl: '#'
+                name: 'Asfatour Web Travel',
+                description: 'A travel website for a tour and travel agency named Asfatour, operating in Lamongan, East Java. This website is designed to increase awareness among potential customers about the newly established travel agency.',
+                imageUrl: 'https://ryucode.com/assets/img/projects/project_6874830e34e5e.png',
+                liveUrl: 'https://asfatour.com',
+                githubUrl: ''
             },
             {
-                name: 'Project Delta',
-                description: 'A content management system (CMS) built with Laravel and MySQL, designed for easy content creation and management.',
-                imageUrl: 'https://placehold.co/600x400/1e293b/0ea5e9?text=Project+Delta',
-                liveUrl: '#',
-                githubUrl: '#'
+                name: 'GriyaCozy Website',
+                description: 'A boarding house business website with a catalog feature, integrated with Midtrans payment gateway and connected to a WhatsApp bot.',
+                imageUrl: 'https://ryucode.com/assets/img/projects/project_6874834b89c08.png',
+                liveUrl: 'https://griyacozy.web.id',
+                githubUrl: ''
+            },
+            {
+                name: 'Mikrotik Multi Vendor Device Monitoring System',
+                description: 'This system aims to monitor network devices (such as routers, switches, servers) from various vendors (multi-vendor), with real-time and historical data displays for observability, problem solving and performance analysis.',
+                imageUrl: 'https://ryucode.com/assets/img/projects/project_6880d0b063cd4.png',
+                liveUrl: '',
+                githubUrl: ''
             },
         ] as Project[]
     }),

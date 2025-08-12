@@ -16,13 +16,13 @@ onMounted(() => {
         spaceBetween: 30,
         loop: true,
         autoplay: {
-            delay: 2500,
+            delay: 1000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true
         },
         pagination: {
             el: ".swiper-pagination",
-            clickable: true
+            clickable: true,
         },
         breakpoints: {
             768: {
@@ -52,10 +52,10 @@ onMounted(() => {
                             <h3 class="text-xl font-bold text-white mb-2">{{ project.name }}</h3>
                             <p class="text-slate-400 mb-4 flex-grow">{{ project.description }}</p>
                             <div class="flex space-x-4 mt-auto">
-                                <a :href="project.liveUrl" target="_blank"
+                                <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank"
                                     class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">Live
                                     Demo <i class="fas fa-external-link-alt text-sm"></i></a>
-                                <a :href="project.githubUrl" target="_blank"
+                                <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank"
                                     class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">GitHub
                                     <i class="fab fa-github text-sm"></i></a>
                             </div>

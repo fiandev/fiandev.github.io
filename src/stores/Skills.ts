@@ -22,6 +22,7 @@ export const useSkillsStore = defineStore('skills', {
                     { name: 'HTML5', iconClass: 'devicon-html5-plain-wordmark', colorClass: 'text-orange-500' },
                     { name: 'CSS3', iconClass: 'devicon-css3-plain-wordmark', colorClass: 'text-blue-500' },
                     { name: 'JavaScript', iconClass: 'devicon-javascript-plain', colorClass: 'text-yellow-400' },
+                    { name: "Bootstrap CSS", iconClass: 'devicon-bootstrap-plain', colorClass: 'text-indigo-500' },
                     { name: 'Tailwind CSS', iconClass: 'devicon-tailwindcss-plain', colorClass: 'text-teal-400' },
                     { name: 'React', iconClass: 'devicon-react-original-wordmark', colorClass: 'text-sky-400' },
                     { name: 'Vue.js', iconClass: 'devicon-vuejs-plain-wordmark', colorClass: 'text-green-500' },
@@ -31,12 +32,33 @@ export const useSkillsStore = defineStore('skills', {
                 id: 'backend',
                 name: 'Backend',
                 skills: [
-                    { name: 'Node.js', iconClass: 'devicon-nodejs-plain-wordmark', colorClass: 'text-green-500' },
                     { name: 'Express', iconClass: 'devicon-express-original-wordmark', colorClass: '' },
-                    { name: 'PHP', iconClass: 'devicon-php-plain', colorClass: 'text-indigo-400' },
                     { name: 'Laravel', iconClass: 'devicon-laravel-plain-wordmark', colorClass: 'text-red-500' },
-                    { name: 'MySQL', iconClass: 'devicon-mysql-plain-wordmark', colorClass: 'text-blue-400' },
+                    { name: "Flask", iconClass: "devicon-flask-plain-wordmark", colorClass: "text-blue-400" },
+                    { name: "Nest.js", iconClass: "devicon-nestjs-plain-wordmark", colorClass: "text-red-400" },
+                    { name: "CodeIgniter", iconClass: "devicon-codeigniter-plain-wordmark", colorClass: "text-red-500" },
+                ]
+            },
+            {
+                id: "language",
+                name: "Language",
+                skills: [
+                    { name: 'JavaScript', iconClass: 'devicon-javascript-plain', colorClass: 'text-yellow-400' },
+                    { name: 'PHP', iconClass: 'devicon-php-plain', colorClass: 'text-indigo-400' },
+                    { name: 'Node.js', iconClass: 'devicon-nodejs-plain-wordmark', colorClass: 'text-green-500' },
+                    { name: 'Python', iconClass: 'devicon-python-plain', colorClass: 'text-blue-500' },
+                    { name: 'Go', iconClass: 'devicon-go-plain', colorClass: 'text-sky-400' },
+
+                ]
+            },
+            {
+                id: "DBMS",
+                name: "DBMS",
+                skills: [
+                    { name: 'MySQL', iconClass: 'devicon-mysql-plain-wordmark', colorClass: 'text-yellow-400' },
                     { name: 'MongoDB', iconClass: 'devicon-mongodb-plain-wordmark', colorClass: 'text-green-400' },
+                    { name: 'PostgreSQL', iconClass: 'devicon-postgresql-plain-wordmark', colorClass: "text-blue-400" },
+                    { name: "SQLite", iconClass: "devicon-sqlite-plain-wordmark", colorClass: "text-yellow-400" }
                 ]
             },
             {

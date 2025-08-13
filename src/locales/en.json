@@ -1,0 +1,34 @@
+{
+    "app": {
+        "title": "My Portfolio",
+        "loading": "Loading...",
+        "error": "An error occurred",
+        "notFound": "Page not found"
+    },
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "about": {
+        "title": "About Me",
+        "prophecy": "Fullstack Web Developer",
+        "overview": "A dedicated Fullstack Developer committed to creating seamless and efficient web experiences. I am passionate about innovation in the Web3 and AI space and eager to integrate decentralized technologies into web projects."
+    },
+    "projects": {
+        "fulhive": "web application for inventory management that is integrated with online marketplaces.",
+        "flexio": "A freelancer platform called Flexio with seller-buyer switch feature integrated with Xendit.",
+        "asfatour": "A travel website for a tour and travel agency named Asfatour, operating in Lamongan, East Java. This website is designed to increase awareness among potential customers about the newly established travel agency.",
+        "griyacozy": "A boarding house business website with a catalog feature, integrated with Midtrans payment gateway and connected to a WhatsApp bot.",
+        "mikrotik": "This system aims to monitor network devices (such as routers, switches, servers) from various vendors (multi-vendor), with real-time and historical data displays for observability, problem solving and performance analysis."
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send Message",
+        "success": "Message sent successfully!"
+    }
+}

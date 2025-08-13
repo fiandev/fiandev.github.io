@@ -1,0 +1,34 @@
+{
+    "app": {
+        "title": "Portofolio Saya",
+        "loading": "Memuat...",
+        "error": "Terjadi kesalahan",
+        "notFound": "Halaman tidak ditemukan"
+    },
+    "navigation": {
+        "home": "Beranda",
+        "about": "Tentang",
+        "projects": "Proyek",
+        "contact": "Kontak"
+    },
+    "about": {
+        "title": "Tentang Saya",
+        "prophecy": "Pengembang Webiste",
+        "overview": "Fullstack Developer yang berdedikasi untuk menciptakan pengalaman web yang mulus dan efisien. Saya sangat antusias dengan inovasi di dunia Web3 dan AI dan bersemangat untuk mengintegrasikan teknologi terdesentralisasi ke dalam proyek-proyek web."
+    },
+    "projects": {
+        "fulhive": "Aplikasi web untuk manajemen inventaris yang terintegrasi dengan pasar daring.",
+        "flexio": "Platform freelancer bernama Flexio dengan fitur peralihan penjual-pembeli yang terintegrasi dengan Xendit.",
+        "asfatour": "Situs web perjalanan untuk agen perjalanan dan wisata bernama Asfatour yang beroperasi di Lamongan, Jawa Timur. Situs web ini dirancang untuk meningkatkan kesadaran di kalangan calon pelanggan tentang agen perjalanan yang baru didirikan.",
+        "griyacozy": "Situs web bisnis penginapan dengan fitur katalog, terintegrasi dengan gateway pembayaran Midtrans dan terhubung ke bot WhatsApp.",
+        "mikrotik": "Sistem ini bertujuan untuk memantau perangkat jaringan (seperti router, switch, server) dari berbagai vendor (multi-vendor), dengan tampilan data real-time dan historis untuk observabilitas, pemecahan masalah, dan analisis kinerja."
+    },
+    "contact": {
+        "title": "Hubungi Saya",
+        "name": "Nama",
+        "email": "Email",
+        "message": "Pesan",
+        "send": "Kirim Pesan",
+        "success": "Pesan berhasil dikirim!"
+    }
+}

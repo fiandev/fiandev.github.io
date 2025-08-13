@@ -6,7 +6,7 @@ const chatStore = useChatStore()
 const chatMessagesContainer = ref<HTMLElement | null>(null);
 
 // Auto-scroll to the bottom when new messages are added
-watch(   () => chatStore.messages,
+watch(() => chatStore.messages,
     async () => {
         // Wait for the DOM to update
         await nextTick();
@@ -20,6 +20,13 @@ watch(   () => chatStore.messages,
 const handleSendMessage = () => {
     chatStore.sendMessage();
 }
+
+const isOnline = ref(navigator.onLine);
+
+watch(() => navigator.onLine, (newOnline) => {
+    isOnline.value = newOnline;
+});
+
 </script>
 
 <template>
@@ -48,7 +55,7 @@ const handleSendMessage = () => {
                         </div>
                         <div>
                             <p class="font-bold text-white">AI Assistant</p>
-                            <p class="text-xs text-slate-400">Online</p>
+                            <p class="text-xs text-slate-400">{{ isOnline }}</p>
                         </div>
                     </div>
                     <button @click="chatStore.closeChat" id="chat-close-btn" class="text-slate-400 hover:text-white">
@@ -73,9 +80,9 @@ const handleSendMessage = () => {
                 <div class="p-4 bg-slate-900 rounded-b-xl flex-shrink-0">
                     <form @submit.prevent="handleSendMessage" class="flex items-center space-x-2">
                         <input type="text" placeholder="Ketik pesan Anda..." v-model="chatStore.newMessage"
-                            class="flex-1 bg-slate-700 border border-slate-600 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm text-white">
+                            class="w-3/4 bg-slate-700 border border-slate-600 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm text-white">
                         <button type="submit"
-                            class="bg-sky-500 text-white w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center hover:bg-sky-600 transition-colors">
+                            class="bg-sky-500 text-white w-1/4 h-10 rounded-full flex-shrink-0 flex items-center justify-center hover:bg-sky-600 transition-colors">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>

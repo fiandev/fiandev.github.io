@@ -3,9 +3,12 @@ import { onMounted } from 'vue';
 import Swiper from 'swiper';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { useProjectsStore } from '@/stores/Projects';
+import { useI18n } from 'vue-i18n'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+
+const { t } = useI18n()
 
 const projectsStore = useProjectsStore();
 
@@ -50,7 +53,7 @@ onMounted(() => {
                         </div>
                         <div class="p-6 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold text-white mb-2">{{ project.name }}</h3>
-                            <p class="text-slate-400 mb-4 flex-grow">{{ project.description }}</p>
+                            <p class="text-slate-400 mb-4 flex-grow">{{ t(project.description) }}</p>
                             <div class="flex space-x-4 mt-auto">
                                 <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank"
                                     class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">Live

@@ -36,7 +36,7 @@ watch(() => navigator.onLine, (newOnline) => {
             leave-active-class="transition-all duration-200 ease-in" leave-to-class="opacity-0 scale-75">
             <button v-if="!chatStore.isChatOpen" @click="chatStore.openChat" id="chat-open-btn"
                 class="bg-sky-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
-                <i class="fas fa-comment-dots text-2xl"></i>
+                <i class="fas fa-robot text-2xl"></i>
             </button>
         </Transition>
 
@@ -79,11 +79,12 @@ watch(() => navigator.onLine, (newOnline) => {
                 <!-- Input -->
                 <div class="p-4 bg-slate-900 rounded-b-xl flex-shrink-0">
                     <form @submit.prevent="handleSendMessage" class="flex items-center space-x-2">
-                        <input type="text" placeholder="Ketik pesan Anda..." v-model="chatStore.newMessage"
+                        <input :disabled="chatStore.isLoading" type="text" placeholder="Ketik pesan Anda..."
+                            v-model="chatStore.newMessage"
                             class="w-3/4 bg-slate-700 border border-slate-600 rounded-full py-2 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm text-white">
-                        <button type="submit"
+                        <button :disabled="chatStore.isLoading" type="submit"
                             class="bg-sky-500 text-white w-1/4 h-10 rounded-full flex-shrink-0 flex items-center justify-center hover:bg-sky-600 transition-colors">
-                            <i class="fas fa-paper-plane"></i>
+                            <i :class="chatStore.isLoading ? 'fas fa-spinner animate-spin' : 'fas fa-paper-plane'"></i>
                         </button>
                     </form>
                 </div>

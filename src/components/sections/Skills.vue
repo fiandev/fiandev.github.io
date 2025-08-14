@@ -13,7 +13,7 @@ const changeTab = (tabId: string) => {
 <template>
     <section id="skills" class="py-20">
         <h2 class="text-4xl font-bold text-center text-white mb-16" data-aos="fade-up">My Tech Stack</h2>
-        <div class="w-max-full overflow-x-scroll">
+        <div class="w-max-full overflow-x-scroll scrollbar-hide">
             <div class="flex justify-start space-x-2 md:space-x-4 mb-12" data-aos="fade-up" data-aos-delay="100">
                 <button v-for="category in skillsStore.categories" :key="category.id" @click="changeTab(category.id)"
                     :class="[

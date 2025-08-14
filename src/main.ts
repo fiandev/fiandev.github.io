@@ -2,6 +2,7 @@ import "./assets/base.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import "./assets/main.css";
+import "./assets/logo.svg";
 
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'

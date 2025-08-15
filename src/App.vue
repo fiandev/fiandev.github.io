@@ -7,9 +7,9 @@ import Loader from './components/animations/Loader.vue'
 </script>
 
 <template>
-  <Loader />
 
   <div class="bg-slate-900 text-slate-300 relative max-w-screen overflow-x-hidden">
+    <Loader />
     <Header />
     <Main />
     <Footer />

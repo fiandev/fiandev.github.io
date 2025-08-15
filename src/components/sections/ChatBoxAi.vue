@@ -27,6 +27,15 @@ watch(() => navigator.onLine, (newOnline) => {
     isOnline.value = newOnline;
 });
 
+window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        chatStore.closeChat();
+    }
+    // space
+    if (e.key === " ") {
+        chatStore.openChat();
+    }
+})
 </script>
 
 <template>
@@ -49,13 +58,13 @@ watch(() => navigator.onLine, (newOnline) => {
                 <!-- Header -->
                 <div class="flex items-center justify-between p-4 bg-slate-900 rounded-t-xl flex-shrink-0">
                     <div class="flex items-center space-x-3">
-                        <div class="relative"><img src="https://placehold.co/40x40/1e293b/ffffff?text=AI"
-                                alt="AI Avatar" class="w-10 h-10 rounded-full"><span
-                                class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-slate-900 rounded-full"></span>
+                        <div class="relative">
+                            <img src="/yui.png" alt="AI Avatar" class="w-10 h-10 rounded-full"><span
+                                class="absolute bottom-0 right-0 w-3 h-3 animate-pulse bg-green-500 border-2 border-slate-900 rounded-full"></span>
                         </div>
                         <div>
-                            <p class="font-bold text-white">AI Assistant</p>
-                            <p class="text-xs text-slate-400">{{ isOnline }}</p>
+                            <p class="font-bold text-white">Yui Hirasawa</p>
+                            <p class="text-xs text-slate-400">{{ isOnline ? 'Online' : 'Offline' }}</p>
                         </div>
                     </div>
                     <button @click="chatStore.closeChat" id="chat-close-btn" class="text-slate-400 hover:text-white">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { useUserStore } from '@/stores/About'
 
 
@@ -9,6 +9,28 @@ const isMenuOpen = ref(false)
 const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value
 }
+
+const locationHash = ref(window.location.hash)
+
+// observer all sections elements
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            locationHash.value = `#${entry.target.id}`
+        }
+    })
+})
+
+onMounted(() => {
+    const sections = document.querySelectorAll('section')
+    sections.forEach((section) => {
+        observer.observe(section)
+    })
+})
+
+onUnmounted(() => {
+    observer.disconnect()
+})
 </script>
 <template>
     <header class="bg-slate-900/70 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
@@ -16,13 +38,17 @@ const toggleMenu = () => {
             <a href="#" class="text-2xl font-bold text-white">{{ name }}</a>
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="#about" class="hover:text-sky-400 transition-colors duration-300">About</a>
-                <a href="#skills" class="hover:text-sky-400 transition-colors duration-300">Skills</a>
-                <a href="#experience" class="hover:text-sky-400 transition-colors duration-300">Experience</a>
-                <a href="#projects" class="hover:text-sky-400 transition-colors duration-300">Projects</a>
+                <a href="#about" class="hover:text-sky-400 transition-colors duration-300"
+                    :class="{ 'text-sky-400': locationHash === '#about' }">About</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors duration-300"
+                    :class="{ 'text-sky-400': locationHash === '#skills' }">Skills</a>
+                <a href="#experience" class="hover:text-sky-400 transition-colors duration-300"
+                    :class="{ 'text-sky-400': locationHash === '#experience' }">Experience</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors duration-300"
+                    :class="{ 'text-sky-400': locationHash === '#projects' }">Projects</a>
                 <a href="#contact"
-                    class="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300">Contact
-                    Me</a>
+                    class="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
+                    :class="{ 'bg-sky-600 text-white': locationHash === '#contact' }">Contact Me</a>
             </div>
             <!-- Hamburger Button -->
             <button @click="toggleMenu" class="md:hidden focus:outline-none text-white">

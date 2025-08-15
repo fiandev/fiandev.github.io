@@ -168,7 +168,5 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // --- Mulai animasi ---
     animateParticles();
-
-    // --- DEMO: Panggil fungsi hideLoader setelah 5 detik ---
 });
 </script>

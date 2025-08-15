@@ -3,12 +3,18 @@
 @import url("https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css");
 
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
 
+
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 0;
+    height: 0;
 }
 
 ::-webkit-scrollbar-track {
@@ -17,7 +23,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: #0ea5e9;
-    border-radius: 10px;
+    border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -25,7 +31,7 @@ body {
 }
 
 .swiper-pagination-bullet {
-    background-color: #64748b;
+    background-color: #38bdf8;
     width: 10px;
     height: 10px;
     transition: background-color 0.3s ease;

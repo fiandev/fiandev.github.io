@@ -49,11 +49,11 @@ onMounted(() => {
                     <div class="bg-slate-800 rounded-lg overflow-hidden group h-full flex flex-col">
                         <div class="overflow-hidden">
                             <img :src="project.imageUrl" :alt="project.name"
-                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                class="w-full h-52 h-max-52 object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
-                        <div class="p-6 flex flex-col flex-grow">
+                        <div class="p-6 flex flex-col flex-grow h-48 h-max-48">
                             <h3 class="text-xl font-bold text-white mb-2">{{ project.name }}</h3>
-                            <p class="text-slate-400 mb-4 flex-grow">{{ t(project.description) }}</p>
+                            <p class="text-slate-400 mb-4 flex-grow line-clamp-4">{{ t(project.description) }}</p>
                             <div class="flex space-x-4 mt-auto">
                                 <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank"
                                     class="text-sky-400 hover:text-sky-300 font-medium transition-colors duration-300">Live

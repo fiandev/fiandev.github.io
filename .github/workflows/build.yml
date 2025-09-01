@@ -4,7 +4,41 @@ steps:
   - uses: actions/checkout@v4
 
   # Sets up Bun, a fast JavaScript runtime and package manager
-  - name: Setup Bun
+  - name: Setup Bunname: CI
+
+on:
+  push:
+    branches: [ "new" ]
+  pull_request:
+    branches: [ "new" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Cache Bun dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build Vue project
+        run: bun run build
     uses: oven-sh/setup-bun@v1
     with:
       bun-version: latest

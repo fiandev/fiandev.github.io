@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useSkillsStore } from '@/stores/Skills'
 
 const skillsStore = useSkillsStore()
@@ -8,6 +8,12 @@ const activeTab = ref('frontend')
 const changeTab = (tabId: string) => {
     activeTab.value = tabId
 }
+
+// rerender when tab change
+watch(activeTab, () => {
+    //
+})
+
 
 </script>
 <template>
@@ -28,13 +34,19 @@ const changeTab = (tabId: string) => {
         </div>
         <div id="skills-content" data-aos="fade-up" data-aos-delay="200">
             <div v-for="category in skillsStore.categories" :key="category.id" v-show="activeTab === category.id">
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
-                    <div v-for="skill in category.skills" :key="skill.name"
-                        class="bg-slate-800 p-6 rounded-lg flex flex-col items-center justify-center space-y-4 hover:bg-slate-700/50 hover:-translate-y-2 transition-all duration-300">
+                <TransitionGroup name="staggered-fade" tag="div"
+                    class="grid grid-cols-2 sm:grid-cols-3 overflow-hidden md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
+                    <div v-for="(skill, index) in category.skills" :key="skill.name" :class="[
+                        `bg-slate-800 p-6 rounded-lg transition-all duration-500 cursor-pointer flex flex-col items-center justify-center space-y-4`,
+                        activeTab === category.id ? 'skill-item' : '',
+                        'hover:bg-slate-700/50 hover:-translate-y-2'
+                    ]" :style="{
+                        animation: `fadeUp ${(index + 1) * 500}ms ease-in-out`
+                    }">
                         <i :class="[skill.iconClass, skill.colorClass, 'text-5xl']"></i>
                         <p>{{ skill.name }}</p>
                     </div>
-                </div>
+                </TransitionGroup>
             </div>
         </div>
     </section>

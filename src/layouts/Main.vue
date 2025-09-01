@@ -50,12 +50,12 @@ watch(() => {
 </script>
 
 <template>
-    <main class="container-xl mx-auto px-6 pt-24">
-        <About />
-        <Skills />
-        <Resume />
-        <Projects />
-        <Contact />
+    <main class="container-xl bg-black/30 mx-auto">
+        <About class="section-bg-odd" />
+        <Skills class="section-bg-even" />
+        <Resume class="section-bg-odd" />
+        <Projects class="section-bg-even" />
+        <Contact class="section-bg-odd" />
 
     </main>
 </template>

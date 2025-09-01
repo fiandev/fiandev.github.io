@@ -12,7 +12,8 @@ const resumeStore = useResumeStore()
                         class="fas fa-briefcase"></i> Experience</h3>
                 <div
                     class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-600 before:to-transparent">
-                    <div v-for="(item, index) in resumeStore.getExperience" :key="index"
+                    <TransitionGroup name="staggered-fade" tag="div" v-for="(item, index) in resumeStore.getExperience"
+                        :key="index"
                         class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
                         <div
                             class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-sky-500 bg-slate-800 group-hover:bg-sky-500 transition-colors duration-300 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
@@ -27,7 +28,7 @@ const resumeStore = useResumeStore()
                             <p class="text-sm text-slate-400 mb-2">{{ item.institution }}</p>
                             <p class="text-slate-400 text-sm">{{ item.description }}</p>
                         </div>
-                    </div>
+                    </TransitionGroup>
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
@@ -35,7 +36,8 @@ const resumeStore = useResumeStore()
                         class="fas fa-graduation-cap"></i> Education</h3>
                 <div
                     class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-600 before:to-transparent">
-                    <div v-for="(item, index) in resumeStore.getEducation" :key="index"
+                    <TransitionGroup name="staggered-fade" tag="div" v-for="(item, index) in resumeStore.getEducation"
+                        :key="index"
                         class="relative flex items-center justify-between md:justify-normal md:even:flex-row-reverse group">
                         <div
                             class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-sky-500 bg-slate-800 group-hover:bg-sky-500 transition-colors duration-300 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
@@ -50,7 +52,7 @@ const resumeStore = useResumeStore()
                             <p class="text-sm text-slate-400 mb-2">{{ item.institution }}</p>
                             <p class="text-slate-400 text-sm">{{ item.description }}</p>
                         </div>
-                    </div>
+                    </TransitionGroup>
                 </div>
             </div>
         </div>

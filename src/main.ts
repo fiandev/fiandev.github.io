@@ -31,6 +31,6 @@ app.use(i18n);
 app.mount('#app');
 
 AOS.init({
-    once: true,
+    once: false,
     duration: 800,
 });

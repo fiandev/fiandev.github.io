@@ -1,34 +1,88 @@
 {
-    "app": {
-        "title": "Portofolio Saya",
-        "loading": "Memuat...",
-        "error": "Terjadi kesalahan",
-        "notFound": "Halaman tidak ditemukan"
-    },
-    "navigation": {
-        "home": "Beranda",
-        "about": "Tentang",
-        "projects": "Proyek",
-        "contact": "Kontak"
-    },
-    "about": {
-        "title": "Tentang Saya",
-        "prophecy": "Pengembang Webiste",
-        "overview": "Fullstack Developer yang berdedikasi untuk menciptakan pengalaman web yang mulus dan efisien. Saya sangat antusias dengan inovasi di dunia Web3 dan AI dan bersemangat untuk mengintegrasikan teknologi terdesentralisasi ke dalam proyek-proyek web."
-    },
-    "projects": {
-        "fulhive": "Aplikasi web untuk manajemen inventaris yang terintegrasi dengan pasar daring.",
-        "flexio": "Platform freelancer bernama Flexio dengan fitur peralihan penjual-pembeli yang terintegrasi dengan Xendit.",
-        "asfatour": "Situs web perjalanan untuk agen perjalanan dan wisata bernama Asfatour yang beroperasi di Lamongan, Jawa Timur. Situs web ini dirancang untuk meningkatkan kesadaran di kalangan calon pelanggan tentang agen perjalanan yang baru didirikan.",
-        "griyacozy": "Situs web bisnis penginapan dengan fitur katalog, terintegrasi dengan gateway pembayaran Midtrans dan terhubung ke bot WhatsApp.",
-        "mikrotik": "Sistem ini bertujuan untuk memantau perangkat jaringan (seperti router, switch, server) dari berbagai vendor (multi-vendor), dengan tampilan data real-time dan historis untuk observabilitas, pemecahan masalah, dan analisis kinerja."
-    },
-    "contact": {
-        "title": "Hubungi Saya",
-        "name": "Nama",
-        "email": "Email",
-        "message": "Pesan",
-        "send": "Kirim Pesan",
-        "success": "Pesan berhasil dikirim!"
-    }
+  "app": {
+    "title": "Portofolio Saya",
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "notFound": "Halaman tidak ditemukan"
+  },
+  "navigation": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "projects": "Proyek",
+    "contact": "Kontak"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "prophecy": "Pengembang Webiste",
+    "overview": "Fullstack Developer yang berdedikasi untuk menciptakan pengalaman web yang mulus dan efisien. Saya sangat antusias dengan inovasi di dunia Web3 dan AI dan bersemangat untuk mengintegrasikan teknologi terdesentralisasi ke dalam proyek-proyek web.",
+    "seeMyCv": "Lihat CV Saya",
+    "seeMyWork": "Lihat Pekerjaan Saya",
+    "roles": [
+      "Pengembang Perangkat Lunak",
+      "Programmer",
+      "Penggemar Blockchain",
+      "Fans Linux",
+      "Penikmat Anime"
+    ]
+  },
+  "projects": {
+    "tkluxury": "Didirikan pada tahun 2010, Luxury telah menyediakan pengalaman akomodasi yang luar biasa bagi para pelancong dari seluruh dunia. Yang awalnya dimulai sebagai hostel kecil, kini telah berkembang menjadi destinasi favorit bagi para backpacker, mahasiswa, dan pelancong yang mengutamakan anggaran. Misi kami adalah menciptakan lingkungan yang ramah, aman, dan nyaman di mana para pelancong dapat berinteraksi, berbagi cerita, dan menciptakan kenangan yang tak terlupakan. Kami percaya bahwa akomodasi yang berkualitas seharusnya dapat diakses oleh semua orang, tanpa memandang anggaran.",
+    "fulhive": "Aplikasi web untuk manajemen inventaris yang terintegrasi dengan pasar daring.",
+    "flexio": "Platform freelancer bernama Flexio dengan fitur peralihan penjual-pembeli yang terintegrasi dengan Xendit.",
+    "asfatour": "Situs web perjalanan untuk agen perjalanan dan wisata bernama Asfatour yang beroperasi di Lamongan, Jawa Timur. Situs web ini dirancang untuk meningkatkan kesadaran di kalangan calon pelanggan tentang agen perjalanan yang baru didirikan.",
+    "griyacozy": "Situs web bisnis penginapan dengan fitur katalog, terintegrasi dengan gateway pembayaran Midtrans dan terhubung ke bot WhatsApp.",
+    "mikrotik": "Sistem ini bertujuan untuk memantau perangkat jaringan (seperti router, switch, server) dari berbagai vendor (multi-vendor), dengan tampilan data real-time dan historis untuk observabilitas, pemecahan masalah, dan analisis kinerja."
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "name": "Nama",
+    "email": "Email",
+    "message": "Pesan",
+    "send": "Kirim Pesan",
+    "success": "Pesan berhasil dikirim!"
+  },
+  "resume": {
+    "experience": "Pengalaman",
+    "education": "Pendidikan",
+    "experiences": [
+      {
+        "title": "Chief Technology Officer",
+        "period": "Juli 2025 - Sekarang",
+        "institution": "PT. RyuCode Digital Solutions",
+        "description": "Sebagai Chief Technology Officer, saya bertanggung jawab atas arah teknis perusahaan, memastikan bahwa produk dan layanan kami dikembangkan menggunakan teknologi terbaru dan praktik terbaik. Saya bekerja sama erat dengan tim produk dan teknik untuk mendefinisikan persyaratan teknis, mengimplementasikan fitur baru, dan meningkatkan infrastruktur teknis perusahaan secara keseluruhan."
+      },
+      {
+        "title": "Software Engineer (Intern)",
+        "period": "Februari 2025 - Juni 2025",
+        "institution": "PT. Rise Landscape Holtikultura",
+        "description": "Aktif berpartisipasi dalam pengembangan fitur-fitur baru untuk platform utama perusahaan, okegarden.com, bekerja sama erat dengan tim teknis. Bertanggung jawab atas pemeliharaan dan optimasi fitur-fitur yang sudah ada untuk memastikan kinerja yang lebih baik, skalabilitas, dan keterlibatan pengguna."
+      },
+      {
+        "title": "Senior Web Developer",
+        "period": "Desember 2024 - Mei 2025",
+        "institution": "CV. Asfatour Traveling & Education",
+        "description": "Memimpin pengembangan platform agen perjalanan berbasis web menggunakan Laravel, dengan fokus pada skalabilitas, keamanan, dan kinerja. Mendesain dan mengimplementasikan fitur-fitur utama seperti pemesanan, pengelolaan paket, pembayaran online, dan dashboard admin.Memimpin pengembangan platform agen perjalanan berbasis web menggunakan Laravel, dengan fokus pada skalabilitas, keamanan, dan kinerja. Mendesain dan mengimplementasikan fitur-fitur utama seperti pemesanan, pengelolaan paket, pembayaran online, dan dashboard admin."
+      },
+      {
+        "title": "Fullstack Developer",
+        "period": "Mei 2024 - Agustus 2024",
+        "institution": "CV. Harapan Digital",
+        "description": "Seorang pengembang web full-stack berpengalaman yang menangani permintaan pembuatan situs web khusus untuk klien. Terampil dalam membangun berbagai situs web, termasuk platform e-commerce, situs web sekolah, sistem inventaris, halaman arahan, profil perusahaan, dan portofolio pribadi."
+      },
+      {
+        "title": "Programmer Lepas",
+        "period": "Januari 2022 - April 2024",
+        "institution": "Lepas",
+        "description": "Sebagai pengembang web full-stack lepas, saya menawarkan serangkaian layanan pengembangan web yang komprehensif. Ini termasuk membangun situs web khusus dari awal, menyediakan perbaikan bug dan resolusi kesalahan untuk situs yang ada, menawarkan konsultasi TI ahli, dan berkolaborasi dengan pengembang lain untuk mendukung dan mempercepat proses pengembangan mereka."
+      }
+    ],
+    "educations": [
+      {
+        "title": "SMK Teknik Komputer dan Jaringan",
+        "period": "Juni 2022 - Mei 2024",
+        "institution": "SMK Abdurrahman Wahid",
+        "description": "Selama studi saya di sekolah kejuruan dengan fokus pada Teknik Jaringan, saya membangun dasar yang kuat dalam infrastruktur jaringan. Pelatihan saya mencakup desain dan implementasi jaringan lokal (LAN), administrasi server Linux (Debian), pengelolaan jaringan menggunakan perangkat Mikrotik, serta instalasi serat optik secara praktis. Saya juga terampil dalam pemecahan masalah jaringan untuk mendiagnosis dan menyelesaikan berbagai masalah konektivitas."
+      }
+    ]
+  }
 }

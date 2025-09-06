@@ -1,34 +1,88 @@
 {
-    "app": {
-        "title": "My Portfolio",
-        "loading": "Loading...",
-        "error": "An error occurred",
-        "notFound": "Page not found"
-    },
-    "navigation": {
-        "home": "Home",
-        "about": "About",
-        "projects": "Projects",
-        "contact": "Contact"
-    },
-    "about": {
-        "title": "About Me",
-        "prophecy": "Fullstack Web Developer",
-        "overview": "A dedicated Fullstack Developer committed to creating seamless and efficient web experiences. I am passionate about innovation in the Web3 and AI space and eager to integrate decentralized technologies into web projects."
-    },
-    "projects": {
-        "fulhive": "web application for inventory management that is integrated with online marketplaces.",
-        "flexio": "A freelancer platform called Flexio with seller-buyer switch feature integrated with Xendit.",
-        "asfatour": "A travel website for a tour and travel agency named Asfatour, operating in Lamongan, East Java. This website is designed to increase awareness among potential customers about the newly established travel agency.",
-        "griyacozy": "A boarding house business website with a catalog feature, integrated with Midtrans payment gateway and connected to a WhatsApp bot.",
-        "mikrotik": "This system aims to monitor network devices (such as routers, switches, servers) from various vendors (multi-vendor), with real-time and historical data displays for observability, problem solving and performance analysis."
-    },
-    "contact": {
-        "title": "Get In Touch",
-        "name": "Name",
-        "email": "Email",
-        "message": "Message",
-        "send": "Send Message",
-        "success": "Message sent successfully!"
-    }
+  "app": {
+    "title": "My Portfolio",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "prophecy": "Fullstack Web Developer",
+    "overview": "A dedicated Fullstack Developer committed to creating seamless and efficient web experiences. I am passionate about innovation in the Web3 and AI space and eager to integrate decentralized technologies into web projects.",
+    "seeMyCv": "See My CV",
+    "seeMyWork": "See My Work",
+    "roles": [
+      "Software Engineer",
+      "Fullstack Developer",
+      "Blockchain Enthusiast",
+      "Linux Fans",
+      "Anime Lovers"
+    ]
+  },
+  "projects": {
+    "tkluxury": "Founded in 2010, Luxury has been providing exceptional accommodation experiences for travelers from around the world. What started as a small hostel has grown into a beloved destination for backpackers, students, and budget-conscious travelers. Our mission is to create a welcoming, safe, and comfortable environment where travelers can connect, share stories, and create lasting memories. We believe that great accommodation should be accessible to everyone, regardless of budget.",
+    "fulhive": "web application for inventory management that is integrated with online marketplaces.",
+    "flexio": "A freelancer platform called Flexio with seller-buyer switch feature integrated with Xendit.",
+    "asfatour": "A travel website for a tour and travel agency named Asfatour, operating in Lamongan, East Java. This website is designed to increase awareness among potential customers about the newly established travel agency.",
+    "griyacozy": "A boarding house business website with a catalog feature, integrated with Midtrans payment gateway and connected to a WhatsApp bot.",
+    "mikrotik": "This system aims to monitor network devices (such as routers, switches, servers) from various vendors (multi-vendor), with real-time and historical data displays for observability, problem solving and performance analysis."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Message sent successfully!"
+  },
+  "resume": {
+    "experience": "Experience",
+    "education": "Education",
+    "experiences": [
+      {
+        "title": "Chief Technology Officer",
+        "period": "July 2025 - Present",
+        "institution": "PT. RyuCode Digital Solutions",
+        "description": "As Chief Technology Officer, I am responsible for the company's technical direction, ensuring that our products and services are developed using the latest technologies and best practices. I work closely with the product and engineering teams to define technical requirements, implement new features, and improve the company's overall technical infrastructure."
+      },
+      {
+        "title": "Software Engineer (Intern)",
+        "period": "February 2025 - June 2025",
+        "institution": "PT. Rise Landscape Holtikultura",
+        "description": "Actively participated in the development of new features for the company's main platform, okegarden.com, working closely with the technical team. Responsible for the maintenance and optimization of existing features to ensure better performance, scalability, and user engagement."
+      },
+      {
+        "title": "Senior Web Developer",
+        "period": "December 2024 - May 2025",
+        "institution": "CV. Asfatour Traveling & Education",
+        "description": "Led the development of a web-based travel agent platform using Laravel, with a focus on scalability, security, and performance. Designed and implemented key features such as booking, package management, online payments, and an admin dashboard."
+      },
+      {
+        "title": "Fullstack Developer",
+        "period": "May 2024 - August 2024",
+        "institution": "CV. Harapan Digital",
+        "description": "An experienced full-stack web developer who handles custom website creation requests for clients. Skilled in building a variety of websites, including e-commerce platforms, school websites, inventory systems, landing pages, company profiles, and personal portfolios."
+      },
+      {
+        "title": "Freelance Programmer",
+        "period": "January 2022 - April 2024",
+        "institution": "Freelance",
+        "description": "As a freelance full-stack web developer, I offer a comprehensive suite of web development services. These include building custom websites from the ground up, providing bug fixing and error resolution for existing sites, offering expert IT consultation, and collaborating with other developers to support and accelerate their development process."
+      }
+    ],
+    "educations": [
+      {
+        "title": "Vocational High School in Computer and Network Engineering",
+        "period": "June 2022 - May 2024",
+        "institution": "SMK Abdurrahman Wahid",
+        "description": "During my studies at a vocational school focusing on Network Engineering, I built a strong foundation in network infrastructure. My training included local area network (LAN) design and implementation, Linux server administration (Debian), network management using Mikrotik devices, and practical fiber optic installation. I am also skilled in network troubleshooting to diagnose and resolve various connectivity issues."
+      }
+    ]
+  }
 }

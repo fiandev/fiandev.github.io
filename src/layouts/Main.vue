@@ -9,19 +9,19 @@ import { watch } from 'vue'
 watch(() => {
   window.addEventListener('keydown', (e) => {
     // listen a, s, e, p, c
-    if (e.key === 'a') {
+    if (e.ctrlKey && e.altKey && e.key === 'a') {
       window.location.href = '#about'
     }
-    if (e.key === 's') {
+    if (e.ctrlKey && e.altKey && e.key === 's') {
       window.location.href = '#skills'
     }
-    if (e.key === 'e') {
+    if (e.ctrlKey && e.altKey && e.key === 'e') {
       window.location.href = '#experience'
     }
-    if (e.key === 'p') {
+    if (e.ctrlKey && e.altKey && e.key === 'p') {
       window.location.href = '#projects'
     }
-    if (e.key === 'c') {
+    if (e.ctrlKey && e.altKey && e.key === 'c') {
       window.location.href = '#contact'
     }
   })
@@ -29,19 +29,19 @@ watch(() => {
   return () => {
     window.removeEventListener('keydown', (e) => {
       // listen a, s, e, p, c
-      if (e.key === 'a') {
+      if (e.ctrlKey && e.altKey && e.key === 'a') {
         window.location.href = '#about'
       }
-      if (e.key === 's') {
+      if (e.ctrlKey && e.altKey && e.key === 's') {
         window.location.href = '#skills'
       }
-      if (e.key === 'e') {
+      if (e.ctrlKey && e.altKey && e.key === 'e') {
         window.location.href = '#experience'
       }
-      if (e.key === 'p') {
+      if (e.ctrlKey && e.altKey && e.key === 'p') {
         window.location.href = '#projects'
       }
-      if (e.key === 'c') {
+      if (e.ctrlKey && e.altKey && e.key === 'c') {
         window.location.href = '#contact'
       }
     })

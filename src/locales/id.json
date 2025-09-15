@@ -35,11 +35,24 @@
   },
   "contact": {
     "title": "Hubungi Saya",
+    "description": "Punya proyek atau ide menarik? Saya ingin sekali mendengarnya. Kirimi saya pesan dan mari wujudkan ide Anda.",
     "name": "Nama",
+    "namePlaceholder": "Nama Anda",
     "email": "Email",
+    "emailPlaceholder": "Email Anda",
     "message": "Pesan",
+    "messagePlaceholder": "Pesan Anda",
     "send": "Kirim Pesan",
-    "success": "Pesan berhasil dikirim!"
+    "sending": "Mengirim...",
+    "success": "Pesan berhasil dikirim!",
+    "error": "Gagal mengirim pesan. Silakan coba lagi nanti.",
+    "validation": {
+      "nameRequired": "Nama wajib diisi.",
+      "emailRequired": "Email wajib diisi.",
+      "emailInvalid": "Silakan masukkan alamat email yang valid.",
+      "messageRequired": "Pesan wajib diisi.",
+      "messageTooShort": "Pesan minimal harus 10 karakter."
+    }
   },
   "resume": {
     "experience": "Pengalaman",

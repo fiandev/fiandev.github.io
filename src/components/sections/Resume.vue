@@ -23,7 +23,7 @@ const { t }: { t: Composer['t'] } = useI18n()
             <div
               v-for="(item, index) in resumeStore.getExperience"
               :key="index"
-              class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
+              class="relative my-4 flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
             >
               <div
                 class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-sky-500 bg-slate-800 group-hover:bg-sky-500 transition-colors duration-300 text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"
@@ -66,7 +66,7 @@ const { t }: { t: Composer['t'] } = useI18n()
                 class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-800 p-6 rounded-lg shadow-md hover:shadow-sky-500/20 transition-shadow duration-300"
               >
                 <div class="flex items-center justify-between space-x-2 mb-1">
-                  <h4 class="font-bold text-white">{{ item.title }}</h4>
+                  <h4 class="font-bold text-white w-2/3">{{ item.title }}</h4>
                   <time class="font-caveat font-medium text-sky-400">{{ item.period }}</time>
                 </div>
                 <p class="text-sm text-slate-400 mb-2">{{ item.institution }}</p>

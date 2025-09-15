@@ -1,5 +1,8 @@
 <script setup>
 import { ref, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 // Reactive references for form fields and state management
 const contactName = ref('')
@@ -19,21 +22,21 @@ function validateForm() {
   const newErrors = {}
   // Name validation
   if (!contactName.value.trim()) {
-    newErrors.name = 'Name is required.'
+    newErrors.name = t('contact.validation.nameRequired')
   }
 
   // Email validation
   if (!contactEmail.value.trim()) {
-    newErrors.email = 'Email is required.'
+    newErrors.email = t('contact.validation.emailRequired')
   } else if (!/^\S+@\S+\.\S+$/.test(contactEmail.value)) {
-    newErrors.email = 'Please enter a valid email address.'
+    newErrors.email = t('contact.validation.emailInvalid')
   }
 
   // Message validation
   if (!contactMessage.value.trim()) {
-    newErrors.message = 'Message is required.'
+    newErrors.message = t('contact.validation.messageRequired')
   } else if (contactMessage.value.trim().length < 10) {
-    newErrors.message = 'Message must be at least 10 characters long.'
+    newErrors.message = t('contact.validation.messageTooShort')
   }
 
   errors.value = newErrors
@@ -89,7 +92,7 @@ async function handleSubmit() {
   } catch (error) {
     // Handle network errors or errors from the script
     console.error('Error submitting form:', error)
-    errorMessage.value = `Failed to send message. Please try again later.`
+    errorMessage.value = t('contact.error')
   } finally {
     isSubmitting.value = false
   }
@@ -97,14 +100,13 @@ async function handleSubmit() {
 </script>
 <template>
   <section id="contact" class="py-20">
-    <h2 class="text-4xl font-bold text-center text-white mb-4" data-aos="fade-up">Get In Touch</h2>
+    <h2 class="text-4xl font-bold text-center text-white mb-4" data-aos="fade-up">{{ t('contact.title') }}</h2>
     <p
       class="text-center text-slate-400 mb-12 max-w-2xl mx-auto"
       data-aos="fade-up"
       data-aos-delay="100"
     >
-      Have an interesting project or idea? I'd love to hear about it. Send me a message and let's
-      bring your idea to life.
+      {{ t('contact.description') }}
     </p>
     <form
       @submit.prevent="handleSubmit"
@@ -115,10 +117,10 @@ async function handleSubmit() {
     >
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div>
-          <label for="name" class="block text-slate-400 mb-2">Name</label>
+          <label for="name" class="block text-slate-400 mb-2">{{ t('contact.name') }}</label>
           <input
             type="text"
-            placeholder="Your Name"
+            :placeholder="t('contact.namePlaceholder')"
             v-model="contactName"
             id="name"
             name="name"
@@ -128,10 +130,10 @@ async function handleSubmit() {
           <p v-if="errors.name" class="text-red-500 text-xs mt-1">{{ errors.name }}</p>
         </div>
         <div>
-          <label for="email" class="block text-slate-400 mb-2">Email</label>
+          <label for="email" class="block text-slate-400 mb-2">{{ t('contact.email') }}</label>
           <input
             type="email"
-            placeholder="Your Email"
+            :placeholder="t('contact.emailPlaceholder')"
             v-model="contactEmail"
             id="email"
             name="email"
@@ -142,9 +144,9 @@ async function handleSubmit() {
         </div>
       </div>
       <div class="mb-6">
-        <label for="message" class="block text-slate-400 mb-2">Message</label>
+        <label for="message" class="block text-slate-400 mb-2">{{ t('contact.message') }}</label>
         <textarea
-          placeholder="Your Message"
+          :placeholder="t('contact.messagePlaceholder')"
           id="message"
           v-model="contactMessage"
           name="message"
@@ -161,10 +163,10 @@ async function handleSubmit() {
           :disabled="isSubmitting"
           class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-lg transition-transform duration-300 hover:scale-105"
         >
-          {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+          {{ isSubmitting ? t('contact.sending') : t('contact.send') }}
         </button>
         <p v-if="errorMessage" class="text-red-500 mt-2 text-sm">{{ errorMessage }}</p>
-        <p v-if="formSubmitted" class="text-green-500 mt-2 text-sm">Message sent successfully!</p>
+        <p v-if="formSubmitted" class="text-green-500 mt-2 text-sm">{{ t('contact.success') }}</p>
       </div>
     </form>
   </section>

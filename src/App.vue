@@ -10,7 +10,7 @@ import Loader from './components/animations/Loader.vue'
   <div class="text-slate-300 relative max-w-screen overflow-x-hidden">
     <div class="gradient-container"></div>
     <div class="cursor"></div>
-    <Loader />
+    <!-- <Loader /> -->
     <Header />
     <Main />
     <Footer />
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     blob.classList.add('gradient-blob')
     gradientContainer.appendChild(blob)
 
-    const size = Math.random() * 200 + 100 // Random size between 100px and 300px
+    const size = Math.random() * 200 + 50 // Random size between 100px and 300px
     const color = `hsl(${Math.random() * 360}, 70%, 50%)` // Random HSL color
 
     blob.style.width = `${size}px`
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Create a few blobs initially
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 8; i++) {
     createGradientBlob()
   }
 })

@@ -35,11 +35,24 @@
   },
   "contact": {
     "title": "Get In Touch",
+    "description": "Have an interesting project or idea? I'd love to hear about it. Send me a message and let's bring your idea to life.",
     "name": "Name",
+    "namePlaceholder": "Your Name",
     "email": "Email",
+    "emailPlaceholder": "Your Email",
     "message": "Message",
+    "messagePlaceholder": "Your Message",
     "send": "Send Message",
-    "success": "Message sent successfully!"
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again later.",
+    "validation": {
+      "nameRequired": "Name is required.",
+      "emailRequired": "Email is required.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageRequired": "Message is required.",
+      "messageTooShort": "Message must be at least 10 characters long."
+    }
   },
   "resume": {
     "experience": "Experience",

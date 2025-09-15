@@ -40,7 +40,9 @@ onUnmounted(() => {
 <template>
   <header class="bg-slate-900/70 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold text-white">{{ name }}</a>
+      <a href="#" class="text-2xl font-bold text-white">
+        My<span class="text-sky-400">Portofolio</span>
+      </a>
       <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-8 items-center">
         <a

@@ -4,36 +4,10 @@ import Main from './layouts/Main.vue'
 import Footer from './layouts/Footer.vue'
 import ChatBoxAi from './components/sections/ChatBoxAi.vue'
 import Loader from './components/animations/Loader.vue'
-</script>
+import Cursor from './components/effects/Cursor.vue'
+import { onMounted } from 'vue'
 
-<template>
-  <div class="text-slate-300 relative max-w-screen overflow-x-hidden">
-    <div class="gradient-container"></div>
-    <div class="cursor"></div>
-    <!-- <Loader /> -->
-    <Header />
-    <Main />
-    <Footer />
-    <ChatBoxAi />
-  </div>
-</template>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const cursor = document.querySelector('.cursor')
-
-  document.addEventListener('mousemove', (e) => {
-    cursor.setAttribute('style', 'top: ' + (e.pageY - 10) + 'px; left: ' + (e.pageX - 10) + 'px;')
-  })
-
-  document.addEventListener('click', () => {
-    cursor.classList.add('expand')
-
-    setTimeout(() => {
-      cursor.classList.remove('expand')
-    }, 500)
-  })
-
+onMounted(() => {
   // Gradient background animation
   const gradientContainer = document.querySelector('.gradient-container')
 
@@ -78,3 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 </script>
+
+<template>
+  <div class="text-slate-300 relative max-w-screen overflow-x-hidden">
+    <div class="gradient-container"></div>
+    <Cursor />
+    <Loader />
+    <Header />
+    <Main />
+    <Footer />
+    <ChatBoxAi />
+  </div>
+</template>
